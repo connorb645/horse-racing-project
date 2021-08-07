@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ride: Decodable, Equatable {
+struct Ride: Decodable, Equatable, Hashable {
     let clothNumber: Int
     let horse: Horse
     let formsummary: String

@@ -11,11 +11,13 @@ class RacesViewModel {
     
     var races: [Race] = []
     
+    weak var delegate: RacesViewModelDelegate?
+    
     private let dataFetcher: DataFetcher
     
-    public var state: RacesViewModelState = .empty {
+    public var state: ViewState<Race> = .empty {
         didSet {
-            print("reconfigure the screen")
+            delegate?.receivedStateChange(state: state)
         }
     }
     
@@ -33,7 +35,7 @@ class RacesViewModel {
             if races.isEmpty {
                 state = .empty
             } else {
-                state = .successful(races: races)
+                state = .successful(items: races)
             }
         case .failure(let error):
             switch error {

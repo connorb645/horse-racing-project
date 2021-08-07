@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Race: Decodable, Equatable {
+struct Race: Decodable, Equatable, Hashable {
     let raceSummary: RaceSummary
     let rides: [Ride]
 }

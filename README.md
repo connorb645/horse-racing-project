@@ -61,3 +61,8 @@ A protocol that asks its implementor for required data points needed in order to
     - defaultHeight (Required, Default= 300): The default height of the bottom sheet container view.
     - dismissibleHeight (Required, Default = 200): The height at which the bottom sheet will be dismissed.
     - topPadding (Required, Default = 64): The amount of top padding on the bottom sheet container view.
+
+
+- Data Fetcher and its subclasses, protocols and errors
+- RacesViewModel, RacesView, RacesViewController and any delegates
+

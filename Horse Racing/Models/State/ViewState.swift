@@ -7,17 +7,17 @@
 
 import Foundation
 
-enum RacesViewModelState: Equatable {
+enum ViewState<T: Hashable>: Equatable {
     case empty
-    case successful(races: [Race])
+    case successful(items: [T])
     case failed(message: String)
     
-    static func == (lhs: RacesViewModelState, rhs: RacesViewModelState) -> Bool {
+    static func == (lhs: ViewState, rhs: ViewState) -> Bool {
         switch (lhs, rhs) {
         case (.empty, .empty):
             return true
-        case (.successful(let lhsRaces), .successful(let rhsRaces)):
-            return lhsRaces == rhsRaces
+        case (.successful(let lhsItems), .successful(let rhsItems)):
+            return lhsItems == rhsItems
         case (.failed(let lhsMessage), .failed(let rhsMessage)):
             return lhsMessage == rhsMessage
         default:

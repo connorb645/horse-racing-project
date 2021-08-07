@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Horse: Decodable, Equatable {
+struct Horse: Decodable, Equatable, Hashable {
     let name: String
     let daysSinceLastRun: Int?
     let foaled: String
