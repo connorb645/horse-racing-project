@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Enumeration to help handle state changes on data driven views.
 enum ViewState<T: Hashable>: Equatable {
     case empty
     case successful(items: [T])

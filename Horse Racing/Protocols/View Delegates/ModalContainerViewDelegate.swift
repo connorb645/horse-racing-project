@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Delegate to inform subscribers of noteworthy events made on the ModalContainerView
 protocol ModalContainerViewDelegate: AnyObject {
     func dismissModal()
 }

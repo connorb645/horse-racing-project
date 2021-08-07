@@ -62,7 +62,49 @@ A protocol that asks its implementor for required data points needed in order to
     - dismissibleHeight (Required, Default = 200): The height at which the bottom sheet will be dismissed.
     - topPadding (Required, Default = 64): The amount of top padding on the bottom sheet container view.
 
+## Data Fetcher
 
-- Data Fetcher and its subclasses, protocols and errors
-- RacesViewModel, RacesView, RacesViewController and any delegates
+The idea of the Data Fetcher is to allow me to combine the File Reader and the Json File Decoder into a simple class which handles errors and returns a relevant error message, or successful result. 
 
+The relevant files are:
+
+- BaseDataFetcher (Class)
+- RacesDataFetcher (Class)
+- DataFetcher (Protocol)
+
+### BaseDataFetcher
+
+This class accepts a file name, a file type, a file reader and a json file decoder in the initializer and uses each of these to be able to fetch and return either the requested data, or an error with a message.
+
+### RacesDataFetcher
+
+This class supplies it's superclass with default values for the file name and file type.
+
+### DataFetcher (Protocol)
+
+This protocol is used so that we can use different implementations of the Base Data Fetcher if the alternative option implements this protocol, meaning we can quickly swap out how we retrieve the data in the future.
+
+## Races List Screen
+
+The relevant files are:
+
+- RacesViewController (UIViewController)
+- RacesViewModel (Class)
+- InsetGroupedCollectionView (UIView)
+- RacesViewModelDelegate (Protocol)
+
+### RacesViewController
+
+This View Controller is responsible for initializing the View and the View Model, and coordinating between them; whilst also handling any View Controller life cycle events.
+
+### RacesViewModel
+
+This View Model is responsible for getting the races data and notifying the View Controller upon state changes (successful, error, empty).
+
+### InsetGroupedCollectionView
+
+This View is a reusable view which displays a list of items in an inset grouped formation. The view also hosts the ability to show an informative message to the user if an error occurs, or if there is no data to show.
+
+### RacesViewModelDelegate
+
+This delegate is implemented by the RacesViewController so that it is notified of any noteworthy events raised by the RacesViewModel, namely when the state should change based on the result of the data fetch.

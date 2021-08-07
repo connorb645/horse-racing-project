@@ -27,7 +27,6 @@ class BaseDataFetcher: DataFetcher {
         self.jsonFileDecoder = jsonFileDecoder
     }
     
-    
     /// A method that extracts data using class scoped parameters
     /// - Returns: A Result type of either T: Decodable or a DataFetcherError
     func fetchData<T: Decodable>() -> Result<T, DataFetcherError> {

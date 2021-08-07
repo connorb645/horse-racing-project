@@ -63,6 +63,8 @@ class InsetGroupedCollectionView: UIView {
         infoStackView.anchor(top: stackContainerView.topAnchor, paddingTop: 16, bottom: stackContainerView.bottomAnchor, paddingBottom: 16, left: stackContainerView.leftAnchor, paddingLeft: 16, right: stackContainerView.rightAnchor, paddingRight: 16)
     }
     
+    /// Make the appropriate view changes based on the current state
+    /// - Parameter state: The current state
     func setState<T: Hashable>(_ state: ViewState<T>) {
         switch state {
         case .empty:
