@@ -26,7 +26,11 @@ class RacesViewModel {
         switch result {
         case .success(let races):
             self.races = races
-            state = .successful(races: races)
+            if races.isEmpty {
+                state = .empty
+            } else {
+                state = .successful(races: races)
+            }
         case .failure(let error):
             switch error {
             case .failedWithMessage(let message):

@@ -76,7 +76,9 @@ class RacesViewModelTests: XCTestCase {
         XCTAssertEqual(racesViewModel.state, .successful(races: racesViewModel.races))
     }
     
-    func testStateIdEmptyBeforeAndFailedAfterUnsuccessfulDataRead() {
+    
+    /// A test to check that before fetching data we have an empty state, and after a failed fetch, we have a failed state with the correct error message for this case.
+    func testStateIsEmptyBeforeAndFailedAfterUnsuccessfulDataRead() {
         let fileReader = FileReader(inBundle: Bundle.init(for: type(of: self)))
         let jsonFileDecoder = JsonFileDecoder()
         let dataFetcher = InvalidDataFetcher(fileReader: fileReader, jsonFileDecoder: jsonFileDecoder)
@@ -88,5 +90,20 @@ class RacesViewModelTests: XCTestCase {
         racesViewModel.fetchRaces()
         
         XCTAssertEqual(racesViewModel.state, .failed(message: "File not found with name: InvalidFilename"))
+    }
+    
+    /// A test to check that before fetching data we have an empty state, and after a successful fetch with no results, we have a empty state.
+    func testStateIsEmptyBeforeAndEmptyAfterASuccessfulDataReadWithNoResults() {
+        let fileReader = FileReader(inBundle: Bundle.init(for: type(of: self)))
+        let jsonFileDecoder = JsonFileDecoder()
+        let dataFetcher = EmptyDataFetcher(fileReader: fileReader, jsonFileDecoder: jsonFileDecoder)
+        
+        let racesViewModel = RacesViewModel(dataFetcher: dataFetcher)
+        
+        XCTAssertEqual(racesViewModel.state, .empty)
+                
+        racesViewModel.fetchRaces()
+        
+        XCTAssertEqual(racesViewModel.state, .empty)
     }
 }
