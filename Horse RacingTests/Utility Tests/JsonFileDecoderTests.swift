@@ -81,6 +81,22 @@ class JsonFileDecoderTests: XCTestCase {
         }
     }
     
+    func testCanDecodeFromSnakeCase() {
+        let jsonFileDecoder = JsonFileDecoder()
+        
+        getDataFromFileName("SimpleModelsSnakeCaseData") { data in
+            do {
+                let result: TestMovie = try jsonFileDecoder.decode(data: data)
+                XCTAssertNotNil(result)
+                XCTAssertEqual(result.movieTitle, "Happy Gilmore")
+                XCTAssertEqual(result.movieRating, 4.3)
+                XCTAssertEqual(result.movieDescription, "A comedy about a hockey player turned pro golfer.")
+            } catch {
+                XCTFail("Test failed because we failed to decode model with snake case.")
+            }
+        }
+    }
+    
     /// Used to read data from a file and return the data in completion block.
     /// - Parameters:
     ///   - name: The file name

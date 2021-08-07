@@ -16,10 +16,11 @@ struct JsonFileDecoder {
     /// - Returns: The object once decoded from the Data
     func decode<T: Decodable>(data: Data) throws -> T {
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
             return try decoder.decode(T.self, from: data)
         } catch(let e) {
-            throw JsonDecodingError.decodingFailedWithMessage(e.localizedDescription)
+            throw JsonDecodingError.decodingFailedWithMessage(String(describing: e))
         }
     }
 }
