@@ -14,6 +14,12 @@ class BaseDataFetcher: DataFetcher {
     private let fileReader: FileReader
     private let jsonFileDecoder: JsonFileDecoder
     
+    /// Initializer for BaseDataFetcher
+    /// - Parameters:
+    ///   - fileName: The file name we should try to extract using FileReader
+    ///   - fileType: The file type we should try to extract using FileReader
+    ///   - fileReader: The file reader we should use to extract data with
+    ///   - jsonFileDecoder: The json decoder we should use to convert data into a specified model with
     init(fileName: String, fileType: FileType, fileReader: FileReader, jsonFileDecoder: JsonFileDecoder) {
         self.fileName = fileName
         self.fileType = fileType
@@ -21,6 +27,9 @@ class BaseDataFetcher: DataFetcher {
         self.jsonFileDecoder = jsonFileDecoder
     }
     
+    
+    /// A method that extracts data using class scoped parameters
+    /// - Returns: A Result type of either T: Decodable or a DataFetcherError
     func fetchData<T: Decodable>() -> Result<T, DataFetcherError> {
         do {
             let data = try fileReader.readData(fromFile: fileName, ofType: fileType)

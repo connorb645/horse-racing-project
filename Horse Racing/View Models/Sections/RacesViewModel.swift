@@ -13,13 +13,17 @@ class RacesViewModel {
     
     private let dataFetcher: DataFetcher
     
-    public var state: RacesViewModelState = .empty
+    public var state: RacesViewModelState = .empty {
+        didSet {
+            print("reconfigure the screen")
+        }
+    }
     
     init(dataFetcher: DataFetcher) {
         self.dataFetcher = dataFetcher
     }
     
-    /// Fetches races and stores them in the races array, ready to populate the collection view
+    /// Fetches the races using the supplied data fetcher and then sets the view model state accordingly.
     func fetchRaces() {
         let result: Result<[Race], DataFetcherError> = dataFetcher.fetchData()
         
