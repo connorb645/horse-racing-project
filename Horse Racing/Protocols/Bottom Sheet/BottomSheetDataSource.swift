@@ -11,7 +11,7 @@ import UIKit
 /// 'BottomSheetAttachable' requires this protocol to be conformed to, therefore conformance to 'BottomSheetAttachable' will be enough
 protocol BottomSheetDataSource: AnyObject {
     /// Ask the presenting View Controller to supply the view controller it wants the bottom sheet to host.
-    var viewControllerToPresent: UIViewController { get }
+    var viewControllerToPresent: UIViewController? { get }
     /// Ask the presenting View Controller to supply how dim the background should be for the space above the bottom sheet.
     var backgroundDim: CGFloat { get }
     /// Ask the presenting View Controller to supply how tall the bottom sheet should be by default.

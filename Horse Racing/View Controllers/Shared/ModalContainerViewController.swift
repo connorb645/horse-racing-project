@@ -14,13 +14,13 @@ class ModalContainerViewController: UIViewController, ModalContainerViewDelegate
     
     override func loadView() {
         
-        guard let dataSource = dataSource else {
+        guard let dataSource = dataSource, let viewControllerToPresent = dataSource.viewControllerToPresent else {
             fatalError("You are attempting to present a bottom sheet without specifiying any data points. Try implementing the BottomSheetAttachable protocol on your presenting view controller.")
         }
         
-        addChild(dataSource.viewControllerToPresent)
+        addChild(viewControllerToPresent)
         
-        modalContainerView = ModalContainerView(childViewController: dataSource.viewControllerToPresent, backgroundDim: dataSource.backgroundDim, defaultHeight: dataSource.defaultHeight, dismissibleHeight: dataSource.dismissibleHeight, topPaddingWhenExpanded: dataSource.topPadding, delegate: self)
+        modalContainerView = ModalContainerView(childViewController: viewControllerToPresent, backgroundDim: dataSource.backgroundDim, defaultHeight: dataSource.defaultHeight, dismissibleHeight: dataSource.dismissibleHeight, topPaddingWhenExpanded: dataSource.topPadding, delegate: self)
         
         view = modalContainerView
     }

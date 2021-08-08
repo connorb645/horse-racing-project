@@ -14,6 +14,6 @@ struct Race: Decodable, Equatable, Hashable {
 
 extension Race {
     var overview: String {
-        return "\(raceSummary.time) -- \(raceSummary.name) -- \(raceSummary.courseName)"
+        return "\(raceSummary.time) - \(raceSummary.name)"
     }
 }

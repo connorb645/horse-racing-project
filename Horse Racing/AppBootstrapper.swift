@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class AppBootstrapper {
 
@@ -18,11 +19,7 @@ class AppBootstrapper {
     lazy var racesView = InsetGroupedCollectionView()
     lazy var racesViewModel = RacesViewModel(dataFetcher: racesDataFetcher)
     
-    lazy var racesViewController = RacesViewController(viewModel: racesViewModel, view: racesView, raceDetailViewController: raceDetailViewController)
-    
-    // MARK: - Race Detail View Controller Init
-    
-    lazy var raceDetailViewController = RaceDetailViewController()
+    lazy var racesViewController = RacesViewController(viewModel: racesViewModel, view: racesView)
 
     func bootstrap(window: UIWindow) -> UIWindow {
         let navigationController = UINavigationController(rootViewController: racesViewController)

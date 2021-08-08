@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class RacesViewController: UIViewController, BottomSheetAttachable, StateChangeDelegate {
     
@@ -15,16 +16,16 @@ class RacesViewController: UIViewController, BottomSheetAttachable, StateChangeD
     
     private let racesViewModel: RacesViewModelAbstraction
     private let racesView: InsetGroupedCollectionViewAbstraction
-    private let raceDetailViewController: RaceDetailViewController
     
     private var dataSource: RacesDataSource?
     
+    private var selectedRace: Race?
+    
     // MARK: - Life Cycle
     
-    init(viewModel: RacesViewModelAbstraction, view: InsetGroupedCollectionViewAbstraction, raceDetailViewController: RaceDetailViewController) {
+    init(viewModel: RacesViewModelAbstraction, view: InsetGroupedCollectionViewAbstraction) {
         self.racesViewModel = viewModel
         self.racesView = view
-        self.raceDetailViewController = raceDetailViewController
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -57,7 +58,7 @@ class RacesViewController: UIViewController, BottomSheetAttachable, StateChangeD
     /// configures and keeps hold of the data source so we can apply snapshot changes in the future
     private func configureCollectionView() {
         racesView.collectionView.register(UINib(nibName: OverviewCollectionViewCell.reuseIdentifier, bundle: .main), forCellWithReuseIdentifier: OverviewCollectionViewCell.reuseIdentifier)
-        
+        racesView.collectionView.delegate = self
         dataSource = RacesDataSource(collectionView: racesView.collectionView) { collectionView, indexPath, race in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OverviewCollectionViewCell.reuseIdentifier, for: indexPath) as? OverviewCollectionViewCell else {
                 fatalError("Failed to deque reusable cell of type OverviewCollectionViewCell")
@@ -105,10 +106,22 @@ class RacesViewController: UIViewController, BottomSheetAttachable, StateChangeD
     
     // MARK: - BottomSheetAttachable
     
-    var viewControllerToPresent: UIViewController {
+    var viewControllerToPresent: UIViewController? {
         get {
-            return raceDetailViewController
+            guard let race = selectedRace else { return nil }
+            let raceDetailViewModel = RaceDetailViewModel(race: race)
+            let raceDetailView = RaceDetailView(viewModel: raceDetailViewModel)
+            let raceDetailHostingController = UIHostingController<RaceDetailView>(rootView: raceDetailView)
+            return raceDetailHostingController
         }
+    }
+}
+
+extension RacesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let race = dataSource?.itemIdentifier(for: indexPath) else { return }
+        selectedRace = race
+        displayBottomSheet()
     }
 }
 
