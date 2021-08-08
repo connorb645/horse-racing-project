@@ -1,13 +1,12 @@
 [
     {
         "race_summary": {
-            "name": "Maiden Plate (F & M)",
-            "course_name": "Vaal",
-            "age": "3YO plus",
-            "distance": "4f 214y",
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f 110y",
             "date": "2017-12-15",
-            "time": "10:45",
-            "ride_count": 14,
+            "time": "18:10",
+            "ride_count": 8,
             "race_stage": "WEIGHEDIN",
             "going": "Good to Soft",
             "has_handicap": false,
@@ -15,24 +14,22 @@
         },
         "rides": [
             {
-                "cloth_number": 5,
+                "cloth_number": 4,
                 "horse": {
-                    "name": "Cape Orchid",
-                    "days_since_last_run": 24,
-                    "foaled": "2013-09-28",
-                    "sex": "f"
+                    "name": "Parmigiano",
+                    "days_since_last_run": 21,
+                    "age": 4
                 },
-                "formsummary": "412-12",
+                "formsummary": "2-26",
                 "handicap": "9-6",
-                "current_odds": "5/2"
+                "current_odds": "3/1"
             },
             {
                 "cloth_number": 1,
                 "horse": {
                     "name": "Osculation",
                     "days_since_last_run": 19,
-                    "foaled": "2013-09-17",
-                    "sex": "f"
+                    "age": 3
                 },
                 "formsummary": "325433",
                 "handicap": "9-6",
@@ -43,8 +40,7 @@
                 "horse": {
                     "name": "Casa De Var",
                     "days_since_last_run": 28,
-                    "foaled": "2013-10-21",
-                    "sex": "f"
+                    "age": 5
                     },
                 "formsummary": "48-8191",
                 "handicap": "9-6",
@@ -54,9 +50,8 @@
                 "cloth_number": 9,
                 "horse": {
                     "name": "Madam Secretary",
-                    "last_ran_days": 21,
-                    "foaled": "2013-08-08",
-                    "sex": "f"
+                    "days_since_last_run": 21,
+                    "age": 7
                     },
                 "formsummary": "226222",
                 "handicap": "9-6",
@@ -66,9 +61,8 @@
                 "cloth_number": 10,
                 "horse": {
                     "name": "Music Maker",
-                    "last_ran_days": 35,
-                    "foaled": "2012-09-25",
-                    "sex": "m"
+                    "days_since_last_run": 35,
+                    "age": 4
                     },
                 "formsummary": "7467-4",
                 "handicap": "9-6",
@@ -78,9 +72,8 @@
                 "cloth_number": 13,
                 "horse": {
                     "name": "Twinkle Town",
-                    "last_ran_days": 35,
-                    "foaled": "2013-09-30",
-                    "sex": "m"
+                    "days_since_last_run": 35,
+                    "age": 3
                     },
                 "formsummary": "3461",
                 "handicap": "9-6",
@@ -90,12 +83,10 @@
                 "cloth_number": 3,
                 "horse": {
                     "name": "Brighton Belle",
-                    "last_ran_days": 18,
-                    "foaled": "2013-11-06",
-                    "sex": "f"
+                    "days_since_last_run": 18,
+                    "age": 4
                     },
                 "formsummary": "57687-",
-                "withdrawn" : true,
                 "handicap": "9-6",
                 "current_odds": "33/1"
             },
@@ -103,9 +94,8 @@
                 "cloth_number": 14,
                 "horse": {
                     "name": "Vivacious Vivian",
-                    "last_ran_days": 14,
-                    "foaled": "2013-10-24",
-                    "sex": "m"
+                    "days_since_last_run": 14,
+                    "age": 3
                     },
                 "formsummary": "0-6",
                 "handicap": "9-6",
@@ -115,13 +105,12 @@
     },
     {
         "race_summary": {
-            "name": "Maiden Cup (F & M)",
-            "course_name": "Vaal",
-            "age": "3YO plus",
-            "distance": "4f 214y",
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f 110y",
             "date": "2017-12-15",
-            "time": "10:45",
-            "ride_count": 14,
+            "time": "18:38",
+            "ride_count": 6,
             "race_stage": "WEIGHEDIN",
             "going": "Good to Soft",
             "has_handicap": false,
@@ -129,113 +118,81 @@
         },
         "rides": [
             {
-                "cloth_number": 5,
+                "cloth_number": 4,
                 "horse": {
-                    "name": "Cape Orchid",
-                    "days_since_last_run": 24,
-                    "foaled": "2013-09-28",
-                    "sex": "f"
+                    "name": "Parmigiano",
+                    "days_since_last_run": 21,
+                    "age": 4
                 },
-                "formsummary": "412-12",
+                "formsummary": "2-26",
                 "handicap": "9-6",
-                "current_odds": "5/2"
+                "current_odds": "3/1"
             },
             {
-                "cloth_number": 1,
+                "cloth_number": 11,
                 "horse": {
-                    "name": "Osculation",
-                    "days_since_last_run": 19,
-                    "foaled": "2013-09-17",
-                    "sex": "f"
+                    "name": "Perfect Crime",
+                    "days_since_last_run": 21,
+                    "age": 3
                 },
-                "formsummary": "325433",
+                "formsummary": "2331-82",
                 "handicap": "9-6",
-                "current_odds": "13/8"
-            },
-            {
-                "cloth_number": 6,
-                "horse": {
-                    "name": "Casa De Var",
-                    "days_since_last_run": 28,
-                    "foaled": "2013-10-21",
-                    "sex": "f"
-                    },
-                "formsummary": "48-8191",
-                "handicap": "9-6",
-                "current_odds": "11/1"
-            },
-            {
-                "cloth_number": 9,
-                "horse": {
-                    "name": "Madam Secretary",
-                    "last_ran_days": 21,
-                    "foaled": "2013-08-08",
-                    "sex": "f"
-                    },
-                "formsummary": "226222",
-                "handicap": "9-6",
-                "current_odds": "17/2"
-            },
-            {
-                "cloth_number": 10,
-                "horse": {
-                    "name": "Music Maker",
-                    "last_ran_days": 35,
-                    "foaled": "2012-09-25",
-                    "sex": "m"
-                    },
-                "formsummary": "7467-4",
-                "handicap": "9-6",
-                "current_odds": "14/2"
-            },
-            {
-                "cloth_number": 13,
-                "horse": {
-                    "name": "Twinkle Town",
-                    "last_ran_days": 35,
-                    "foaled": "2013-09-30",
-                    "sex": "m"
-                    },
-                "formsummary": "3461",
-                "handicap": "9-6",
-                "current_odds": "14/2"
+                "current_odds": "4/1"
             },
             {
                 "cloth_number": 3,
                 "horse": {
-                    "name": "Brighton Belle",
-                    "last_ran_days": 18,
-                    "foaled": "2013-11-06",
-                    "sex": "f"
+                    "name": "Priceless Will",
+                    "days_since_last_run": 21,
+                    "age": 4
                     },
-                "formsummary": "57687-",
-                "withdrawn" : true,
+                "formsummary": "2113-73",
                 "handicap": "9-6",
-                "current_odds": "33/1"
+                "current_odds": "7/2"
             },
             {
-                "cloth_number": 14,
+                "cloth_number": 5,
                 "horse": {
-                    "name": "Vivacious Vivian",
-                    "last_ran_days": 14,
-                    "foaled": "2013-10-24",
-                    "sex": "m"
+                    "name": "Candy Overload",
+                    "days_since_last_run": 28,
+                    "age": 3
                     },
-                "formsummary": "0-6",
+                "formsummary": "613-26",
                 "handicap": "9-6",
-                "current_odds": "28/1"
+                "current_odds": "9/2"
+            },
+            {
+                "cloth_number": 1,
+                "horse": {
+                    "name": "Pound Green",
+                    "days_since_last_run": 36,
+                    "age": 4
+                    },
+                "formsummary": "229-17",
+                "handicap": "9-6",
+                "current_odds": "9/1"
+            },
+            {
+                "cloth_number": 8,
+                "horse": {
+                    "name": "Cruden Bay",
+                    "days_since_last_run": 23,
+                    "age": 3
+                    },
+                "formsummary": "1-66",
+                "handicap": "9-6",
+                "current_odds": "12/1"
             }
         ]
     },
     {
         "race_summary": {
-            "name": "Maiden Field (F & M)",
-            "course_name": "Vaal",
-            "age": "3YO plus",
-            "distance": "4f 214y",
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f",
             "date": "2017-12-15",
-            "time": "10:45",
-            "ride_count": 14,
+            "time": "19:07",
+            "ride_count": 4,
             "race_stage": "WEIGHEDIN",
             "going": "Good to Soft",
             "has_handicap": false,
@@ -243,102 +200,49 @@
         },
         "rides": [
             {
-                "cloth_number": 5,
+                "cloth_number": 7,
                 "horse": {
-                    "name": "Cape Orchid",
-                    "days_since_last_run": 24,
-                    "foaled": "2013-09-28",
-                    "sex": "f"
+                    "name": "The Good Watch",
+                    "days_since_last_run": 23,
+                    "age": 4
                 },
-                "formsummary": "412-12",
+                "formsummary": "677-512",
                 "handicap": "9-6",
-                "current_odds": "5/2"
-            },
-            {
-                "cloth_number": 1,
-                "horse": {
-                    "name": "Osculation",
-                    "days_since_last_run": 19,
-                    "foaled": "2013-09-17",
-                    "sex": "f"
-                },
-                "formsummary": "325433",
-                "handicap": "9-6",
-                "current_odds": "13/8"
+                "current_odds": "9/4"
             },
             {
                 "cloth_number": 6,
                 "horse": {
-                    "name": "Casa De Var",
-                    "days_since_last_run": 28,
-                    "foaled": "2013-10-21",
-                    "sex": "f"
-                    },
-                "formsummary": "48-8191",
+                    "name": "What A Beaut",
+                    "days_since_last_run": 78,
+                    "age": 5
+                },
+                "formsummary": "41-058",
                 "handicap": "9-6",
-                "current_odds": "11/1"
+                "current_odds": "3/1"
             },
             {
-                "cloth_number": 9,
+                "cloth_number": 8,
                 "horse": {
-                    "name": "Madam Secretary",
-                    "last_ran_days": 21,
-                    "foaled": "2013-08-08",
-                    "sex": "f"
+                    "name": "Bonnie Lee",
+                    "days_since_last_run": 23,
+                    "age": 5
                     },
-                "formsummary": "226222",
+                "formsummary": "9825-73",
                 "handicap": "9-6",
-                "current_odds": "17/2"
+                "current_odds": "7/2"
             },
             {
-                "cloth_number": 10,
+                "cloth_number": 4,
                 "horse": {
-                    "name": "Music Maker",
-                    "last_ran_days": 35,
-                    "foaled": "2012-09-25",
-                    "sex": "m"
+                    "name": "Sea Lily",
+                    "days_since_last_run": 31,
+                    "age": 4
                     },
-                "formsummary": "7467-4",
+                "formsummary": "4462-45",
                 "handicap": "9-6",
-                "current_odds": "14/2"
-            },
-            {
-                "cloth_number": 13,
-                "horse": {
-                    "name": "Twinkle Town",
-                    "last_ran_days": 35,
-                    "foaled": "2013-09-30",
-                    "sex": "m"
-                    },
-                "formsummary": "3461",
-                "handicap": "9-6",
-                "current_odds": "14/2"
-            },
-            {
-                "cloth_number": 3,
-                "horse": {
-                    "name": "Brighton Belle",
-                    "last_ran_days": 18,
-                    "foaled": "2013-11-06",
-                    "sex": "f"
-                    },
-                "formsummary": "57687-",
-                "withdrawn" : true,
-                "handicap": "9-6",
-                "current_odds": "33/1"
-            },
-            {
-                "cloth_number": 14,
-                "horse": {
-                    "name": "Vivacious Vivian",
-                    "last_ran_days": 14,
-                    "foaled": "2013-10-24",
-                    "sex": "m"
-                    },
-                "formsummary": "0-6",
-                "handicap": "9-6",
-                "current_odds": "28/1"
+                "current_odds": "11/2"
             }
         ]
-    },
+    }
 ]

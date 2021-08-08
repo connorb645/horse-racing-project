@@ -1,13 +1,12 @@
 [
     {
         "race_summary": {
-            "name": "Maiden Plate (F & M)",
-            "course_name": "Vaal",
-            "age": "3YO plus",
-            "distance": "4f 214y",
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f 110y",
             "date": "2017-12-15",
-            "time": "10:45",
-            "ride_count": 14,
+            "time": "18:10",
+            "ride_count": 8,
             "race_stage": "WEIGHEDIN",
             "going": "Good to Soft",
             "has_handicap": false,
@@ -15,24 +14,22 @@
         },
         "rides": [
             {
-                "cloth_number": 5,
+                "cloth_number": 4,
                 "horse": {
-                    "name": "Cape Orchid",
-                    "days_since_last_run": 24,
-                    "foaled": "2013-09-28",
-                    "sex": "f"
+                    "name": "Parmigiano",
+                    "days_since_last_run": 21,
+                    "age": 4
                 },
-                "formsummary": "412-12",
+                "formsummary": "2-26",
                 "handicap": "9-6",
-                "current_odds": "5/2"
+                "current_odds": "3/1"
             },
             {
                 "cloth_number": 1,
                 "horse": {
                     "name": "Osculation",
                     "days_since_last_run": 19,
-                    "foaled": "2013-09-17",
-                    "sex": "f"
+                    "age": 3
                 },
                 "formsummary": "325433",
                 "handicap": "9-6",
@@ -43,8 +40,7 @@
                 "horse": {
                     "name": "Casa De Var",
                     "days_since_last_run": 28,
-                    "foaled": "2013-10-21",
-                    "sex": "f"
+                    "age": 5
                     },
                 "formsummary": "48-8191",
                 "handicap": "9-6",
@@ -54,9 +50,8 @@
                 "cloth_number": 9,
                 "horse": {
                     "name": "Madam Secretary",
-                    "last_ran_days": 21,
-                    "foaled": "2013-08-08",
-                    "sex": "f"
+                    "days_since_last_run": 21,
+                    "age": 7
                     },
                 "formsummary": "226222",
                 "handicap": "9-6",
@@ -66,9 +61,8 @@
                 "cloth_number": 10,
                 "horse": {
                     "name": "Music Maker",
-                    "last_ran_days": 35,
-                    "foaled": "2012-09-25",
-                    "sex": "m"
+                    "days_since_last_run": 35,
+                    "age": 4
                     },
                 "formsummary": "7467-4",
                 "handicap": "9-6",
@@ -78,9 +72,8 @@
                 "cloth_number": 13,
                 "horse": {
                     "name": "Twinkle Town",
-                    "last_ran_days": 35,
-                    "foaled": "2013-09-30",
-                    "sex": "m"
+                    "days_since_last_run": 35,
+                    "age": 3
                     },
                 "formsummary": "3461",
                 "handicap": "9-6",
@@ -90,12 +83,10 @@
                 "cloth_number": 3,
                 "horse": {
                     "name": "Brighton Belle",
-                    "last_ran_days": 18,
-                    "foaled": "2013-11-06",
-                    "sex": "f"
+                    "days_since_last_run": 18,
+                    "age": 4
                     },
                 "formsummary": "57687-",
-                "withdrawn" : true,
                 "handicap": "9-6",
                 "current_odds": "33/1"
             },
@@ -103,9 +94,8 @@
                 "cloth_number": 14,
                 "horse": {
                     "name": "Vivacious Vivian",
-                    "last_ran_days": 14,
-                    "foaled": "2013-10-24",
-                    "sex": "m"
+                    "days_since_last_run": 14,
+                    "age": 3
                     },
                 "formsummary": "0-6",
                 "handicap": "9-6",
@@ -115,13 +105,12 @@
     },
     {
         "race_summary": {
-            "name": "Maiden Cup (F & M)",
-            "course_name": "Vaal",
-            "age": "3YO plus",
-            "distance": "4f 214y",
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f 110y",
             "date": "2017-12-15",
-            "time": "10:45",
-            "ride_count": 14,
+            "time": "18:38",
+            "ride_count": 6,
             "race_stage": "WEIGHEDIN",
             "going": "Good to Soft",
             "has_handicap": false,
@@ -129,97 +118,361 @@
         },
         "rides": [
             {
+                "cloth_number": 4,
+                "horse": {
+                    "name": "Parmigiano",
+                    "days_since_last_run": 21,
+                    "age": 4
+                },
+                "formsummary": "2-26",
+                "handicap": "9-6",
+                "current_odds": "3/1"
+            },
+            {
+                "cloth_number": 11,
+                "horse": {
+                    "name": "Perfect Crime",
+                    "days_since_last_run": 21,
+                    "age": 3
+                },
+                "formsummary": "2331-82",
+                "handicap": "9-6",
+                "current_odds": "4/1"
+            },
+            {
+                "cloth_number": 3,
+                "horse": {
+                    "name": "Priceless Will",
+                    "days_since_last_run": 21,
+                    "age": 4
+                    },
+                "formsummary": "2113-73",
+                "handicap": "9-6",
+                "current_odds": "7/2"
+            },
+            {
                 "cloth_number": 5,
                 "horse": {
-                    "name": "Cape Orchid",
-                    "days_since_last_run": 24,
-                    "foaled": "2013-09-28",
-                    "sex": "f"
-                },
-                "formsummary": "412-12",
+                    "name": "Candy Overload",
+                    "days_since_last_run": 28,
+                    "age": 3
+                    },
+                "formsummary": "613-26",
                 "handicap": "9-6",
-                "current_odds": "5/2"
+                "current_odds": "9/2"
             },
             {
                 "cloth_number": 1,
                 "horse": {
-                    "name": "Osculation",
-                    "days_since_last_run": 19,
-                    "foaled": "2013-09-17",
-                    "sex": "f"
-                },
-                "formsummary": "325433",
+                    "name": "Pound Green",
+                    "days_since_last_run": 36,
+                    "age": 4
+                    },
+                "formsummary": "229-17",
                 "handicap": "9-6",
-                "current_odds": "13/8"
+                "current_odds": "9/1"
+            },
+            {
+                "cloth_number": 8,
+                "horse": {
+                    "name": "Cruden Bay",
+                    "days_since_last_run": 23,
+                    "age": 3
+                    },
+                "formsummary": "1-66",
+                "handicap": "9-6",
+                "current_odds": "12/1"
+            }
+        ]
+    },
+    {
+        "race_summary": {
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f",
+            "date": "2017-12-15",
+            "time": "19:07",
+            "ride_count": 4,
+            "race_stage": "WEIGHEDIN",
+            "going": "Good to Soft",
+            "has_handicap": false,
+            "hidden": false
+        },
+        "rides": [
+            {
+                "cloth_number": 7,
+                "horse": {
+                    "name": "The Good Watch",
+                    "days_since_last_run": 23,
+                    "age": 4
+                },
+                "formsummary": "677-512",
+                "handicap": "9-6",
+                "current_odds": "9/4"
             },
             {
                 "cloth_number": 6,
                 "horse": {
-                    "name": "Casa De Var",
-                    "days_since_last_run": 28,
-                    "foaled": "2013-10-21",
-                    "sex": "f"
-                    },
-                "formsummary": "48-8191",
+                    "name": "What A Beaut",
+                    "days_since_last_run": 78,
+                    "age": 5
+                },
+                "formsummary": "41-058",
                 "handicap": "9-6",
-                "current_odds": "11/1"
+                "current_odds": "3/1"
             },
             {
-                "cloth_number": 9,
+                "cloth_number": 8,
                 "horse": {
-                    "name": "Madam Secretary",
-                    "last_ran_days": 21,
-                    "foaled": "2013-08-08",
-                    "sex": "f"
+                    "name": "Bonnie Lee",
+                    "days_since_last_run": 23,
+                    "age": 5
                     },
-                "formsummary": "226222",
+                "formsummary": "9825-73",
+                "handicap": "9-6",
+                "current_odds": "7/2"
+            },
+            {
+                "cloth_number": 4,
+                "horse": {
+                    "name": "Sea Lily",
+                    "days_since_last_run": 31,
+                    "age": 4
+                    },
+                "formsummary": "4462-45",
+                "handicap": "9-6",
+                "current_odds": "11/2"
+            }
+        ]
+    },
+    {
+        "race_summary": {
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f",
+            "date": "2017-12-15",
+            "time": "19:37",
+            "ride_count": 5,
+            "race_stage": "WEIGHEDIN",
+            "going": "Good to Soft",
+            "has_handicap": false,
+            "hidden": false
+        },
+        "rides": [
+            {
+                "cloth_number": 6,
+                "horse": {
+                    "name": "Tycoon",
+                    "days_since_last_run": 15,
+                    "age": 3
+                },
+                "formsummary": "14469",
+                "handicap": "9-6",
+                "current_odds": "15/8"
+            },
+            {
+                "cloth_number": 11,
+                "horse": {
+                    "name": "Carl G",
+                    "days_since_last_run": 16,
+                    "age": 4
+                },
+                "formsummary": "2531-22",
+                "handicap": "9-6",
+                "current_odds": "9/2"
+            },
+            {
+                "cloth_number": 2,
+                "horse": {
+                    "name": "Better Boogie",
+                    "days_since_last_run": 15,
+                    "age": 4
+                },
+                "formsummary": "1746-94",
+                "handicap": "9-6",
+                "current_odds": "6/1"
+            },
+            {
+                "cloth_number": 13,
+                "horse": {
+                    "name": "Bokermin",
+                    "days_since_last_run": 21,
+                    "age": 5
+                },
+                "formsummary": "354-966",
                 "handicap": "9-6",
                 "current_odds": "17/2"
             },
             {
                 "cloth_number": 10,
                 "horse": {
-                    "name": "Music Maker",
-                    "last_ran_days": 35,
-                    "foaled": "2012-09-25",
-                    "sex": "m"
-                    },
-                "formsummary": "7467-4",
+                    "name": "Wheres My Halter",
+                    "days_since_last_run": 21,
+                    "age": 4
+                },
+                "formsummary": "3-17",
                 "handicap": "9-6",
-                "current_odds": "14/2"
+                "current_odds": "11/1"
+            }
+        ]
+    },
+    {
+        "race_summary": {
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "7f 110y",
+            "date": "2017-12-15",
+            "time": "20:11",
+            "ride_count": 4,
+            "race_stage": "WEIGHEDIN",
+            "going": "Good to Soft",
+            "has_handicap": false,
+            "hidden": false
+        },
+        "rides": [
+            {
+                "cloth_number": 2,
+                "horse": {
+                    "name": "Gorgeous Kitten",
+                    "days_since_last_run": 28,
+                    "age": 3
+                },
+                "formsummary": "14469",
+                "handicap": "9-6",
+                "current_odds": "15/8"
             },
             {
-                "cloth_number": 13,
+                "cloth_number": 11,
                 "horse": {
-                    "name": "Twinkle Town",
-                    "last_ran_days": 35,
-                    "foaled": "2013-09-30",
-                    "sex": "m"
-                    },
-                "formsummary": "3461",
+                    "name": "Courtley Manner",
+                    "days_since_last_run": 16,
+                    "age": 4
+                },
+                "formsummary": "2046-81",
                 "handicap": "9-6",
-                "current_odds": "14/2"
+                "current_odds": "5/2"
             },
             {
                 "cloth_number": 3,
                 "horse": {
-                    "name": "Brighton Belle",
-                    "last_ran_days": 18,
-                    "foaled": "2013-11-06",
-                    "sex": "f"
-                    },
-                "formsummary": "57687-",
-                "withdrawn" : true,
+                    "name": "Cheek To Cheek",
+                    "days_since_last_run": 15,
+                    "age": 4
+                },
+                "formsummary": "06742-1",
                 "handicap": "9-6",
-                "current_odds": "33/1"
+                "current_odds": "4/1"
+            },
+            {
+                "cloth_number": 13,
+                "horse": {
+                    "name": "Distinct Passion",
+                    "days_since_last_run": 21,
+                    "age": 5
+                },
+                "formsummary": "354-966",
+                "handicap": "9-6",
+                "current_odds": "9/2"
+            }
+        ]
+    },
+    {
+        "race_summary": {
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f 110y",
+            "date": "2017-12-15",
+            "time": "20:41",
+            "ride_count": 8,
+            "race_stage": "WEIGHEDIN",
+            "going": "Good to Soft",
+            "has_handicap": false,
+            "hidden": false
+        },
+        "rides": [
+            {
+                "cloth_number": 4,
+                "horse": {
+                    "name": "Tragically Funny",
+                    "days_since_last_run": 21,
+                    "age": 4
+                },
+                "formsummary": "4",
+                "handicap": "9-6",
+                "current_odds": "10/3"
+            },
+            {
+                "cloth_number": 1,
+                "horse": {
+                    "name": "Kiddie Holiday",
+                    "days_since_last_run": 19,
+                    "age": 3
+                },
+                "formsummary": "3",
+                "handicap": "9-6",
+                "current_odds": "4/1"
+            },
+            {
+                "cloth_number": 6,
+                "horse": {
+                    "name": "Wicked Crazy",
+                    "days_since_last_run": 28,
+                    "age": 5
+                    },
+                "formsummary": "7",
+                "handicap": "9-6",
+                "current_odds": "13/2"
+            },
+            {
+                "cloth_number": 9,
+                "horse": {
+                    "name": "Sailor's Passion",
+                    "days_since_last_run": 21,
+                    "age": 7
+                    },
+                "formsummary": "3",
+                "handicap": "9-6",
+                "current_odds": "11/2"
+            },
+            {
+                "cloth_number": 10,
+                "horse": {
+                    "name": "Wild River Wolf",
+                    "days_since_last_run": 35,
+                    "age": 4
+                    },
+                "formsummary": "06",
+                "handicap": "9-6",
+                "current_odds": "11/1"
+            },
+            {
+                "cloth_number": 13,
+                "horse": {
+                    "name": "Thelonious",
+                    "days_since_last_run": 35,
+                    "age": 3
+                    },
+                "formsummary": "788",
+                "handicap": "9-6",
+                "current_odds": "22/1"
+            },
+            {
+                "cloth_number": 3,
+                "horse": {
+                    "name": "Incendio",
+                    "days_since_last_run": 18,
+                    "age": 4
+                    },
+                "formsummary": "788",
+                "handicap": "9-6",
+                "current_odds": "22/1"
             },
             {
                 "cloth_number": 14,
                 "horse": {
                     "name": "Vivacious Vivian",
-                    "last_ran_days": 14,
-                    "foaled": "2013-10-24",
-                    "sex": "m"
+                    "days_since_last_run": 14,
+                    "age": 3
                     },
                 "formsummary": "0-6",
                 "handicap": "9-6",
@@ -227,4 +480,244 @@
             }
         ]
     },
+    {
+        "race_summary": {
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f 110y",
+            "date": "2017-12-15",
+            "time": "21:11",
+            "ride_count": 4,
+            "race_stage": "WEIGHEDIN",
+            "going": "Good to Soft",
+            "has_handicap": false,
+            "hidden": false
+        },
+        "rides": [
+            {
+                "cloth_number": 7,
+                "horse": {
+                    "name": "In My Opinion",
+                    "days_since_last_run": 23,
+                    "age": 4
+                },
+                "formsummary": "2732-92",
+                "handicap": "9-6",
+                "current_odds": "10/3"
+            },
+            {
+                "cloth_number": 6,
+                "horse": {
+                    "name": "Using Coconuts",
+                    "days_since_last_run": 78,
+                    "age": 5
+                },
+                "formsummary": "2-2",
+                "handicap": "9-6",
+                "current_odds": "10/3"
+            },
+            {
+                "cloth_number": 8,
+                "horse": {
+                    "name": "Secrets Told",
+                    "days_since_last_run": 23,
+                    "age": 5
+                    },
+                "formsummary": "48-8332",
+                "handicap": "9-6",
+                "current_odds": "6/1"
+            },
+            {
+                "cloth_number": 4,
+                "horse": {
+                    "name": "Harvest",
+                    "days_since_last_run": 31,
+                    "age": 4
+                    },
+                "formsummary": "6",
+                "handicap": "9-6",
+                "current_odds": "13/2"
+            }
+        ]
+    },
+    {
+        "race_summary": {
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "5f",
+            "date": "2017-12-15",
+            "time": "21:45",
+            "ride_count": 4,
+            "race_stage": "WEIGHEDIN",
+            "going": "Good to Soft",
+            "has_handicap": false,
+            "hidden": false
+        },
+        "rides": [
+            {
+                "cloth_number": 7,
+                "horse": {
+                    "name": "Tiz Romantic",
+                    "days_since_last_run": 23,
+                    "age": 4
+                },
+                "formsummary": "875-37",
+                "handicap": "9-6",
+                "current_odds": "5/2"
+            },
+            {
+                "cloth_number": 6,
+                "horse": {
+                    "name": "Passthepuddinpleaz",
+                    "days_since_last_run": 78,
+                    "age": 5
+                },
+                "formsummary": "653-72",
+                "handicap": "9-6",
+                "current_odds": "11/4"
+            },
+            {
+                "cloth_number": 8,
+                "horse": {
+                    "name": "Lord of Legends",
+                    "days_since_last_run": 23,
+                    "age": 5
+                    },
+                "formsummary": "8228-52",
+                "handicap": "9-6",
+                "current_odds": "3/1"
+            },
+            {
+                "cloth_number": 4,
+                "horse": {
+                    "name": "Cousin Bob",
+                    "days_since_last_run": 31,
+                    "age": 4
+                    },
+                "formsummary": "74-4",
+                "handicap": "9-6",
+                "current_odds": "6/1"
+            }
+        ]
+    },
+    {
+        "race_summary": {
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f",
+            "date": "2017-12-15",
+            "time": "22:18",
+            "ride_count": 4,
+            "race_stage": "WEIGHEDIN",
+            "going": "Good to Soft",
+            "has_handicap": false,
+            "hidden": false
+        },
+        "rides": [
+            {
+                "cloth_number": 7,
+                "horse": {
+                    "name": "Aim For The Sky",
+                    "days_since_last_run": 23,
+                    "age": 4
+                },
+                "formsummary": "677-512",
+                "handicap": "9-6",
+                "current_odds": "9/4"
+            },
+            {
+                "cloth_number": 6,
+                "horse": {
+                    "name": "Sandy Bay",
+                    "days_since_last_run": 78,
+                    "age": 5
+                },
+                "formsummary": "41-058",
+                "handicap": "9-6",
+                "current_odds": "3/1"
+            },
+            {
+                "cloth_number": 8,
+                "horse": {
+                    "name": "Lenny K",
+                    "days_since_last_run": 23,
+                    "age": 5
+                    },
+                "formsummary": "9825-73",
+                "handicap": "9-6",
+                "current_odds": "7/2"
+            },
+            {
+                "cloth_number": 4,
+                "horse": {
+                    "name": "Al Heybay",
+                    "days_since_last_run": 31,
+                    "age": 4
+                    },
+                "formsummary": "4462-45",
+                "handicap": "9-6",
+                "current_odds": "11/2"
+            }
+        ]
+    },
+    {
+        "race_summary": {
+            "name": "Woodbine",
+            "course_name": "Woodbine",
+            "distance": "6f",
+            "date": "2017-12-15",
+            "time": "22:51",
+            "ride_count": 4,
+            "race_stage": "WEIGHEDIN",
+            "going": "Good to Soft",
+            "has_handicap": false,
+            "hidden": false
+        },
+        "rides": [
+            {
+                "cloth_number": 7,
+                "horse": {
+                    "name": "Stormy Derby Day",
+                    "days_since_last_run": 23,
+                    "age": 4
+                },
+                "formsummary": "3-62315",
+                "handicap": "9-6",
+                "current_odds": "11/4"
+            },
+            {
+                "cloth_number": 6,
+                "horse": {
+                    "name": "Cool Society",
+                    "days_since_last_run": 78,
+                    "age": 5
+                },
+                "formsummary": "3530-51",
+                "handicap": "9-6",
+                "current_odds": "4/1"
+            },
+            {
+                "cloth_number": 8,
+                "horse": {
+                    "name": "Very Savvy",
+                    "days_since_last_run": 23,
+                    "age": 5
+                    },
+                "formsummary": "3-71621",
+                "handicap": "9-6",
+                "current_odds": "12/1"
+            },
+            {
+                "cloth_number": 4,
+                "horse": {
+                    "name": "Under The Eye",
+                    "days_since_last_run": 31,
+                    "age": 4
+                    },
+                "formsummary": "4-96681",
+                "handicap": "9-6",
+                "current_odds": "14/1"
+            }
+        ]
+    }
 ]

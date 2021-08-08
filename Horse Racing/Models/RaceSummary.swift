@@ -10,7 +10,6 @@ import Foundation
 struct RaceSummary: Decodable, Equatable, Hashable {
     let name: String
     let courseName: String
-    let age: String
     let distance: String
     let date: String
     let time: String
