@@ -63,4 +63,23 @@ class RacesViewControllerTests: XCTestCase {
         
         XCTAssertTrue(sut.1.didStateChangeFunctionGetTriggered)
     }
+    
+    /// Test to confim that the cells views will show what we ask it to.
+    func testCellConfiguration() {
+        let sut = SUT
+        
+        let viewController = sut.0
+        let view = sut.1
+        
+        viewController.loadViewIfNeeded()
+        
+        guard let cell = view.collectionView.dequeueReusableCell(withReuseIdentifier: OverviewCollectionViewCell.reuseIdentifier, for: IndexPath(row: 0, section: 0)) as? OverviewCollectionViewCell else {
+            XCTFail("Failed to deque OverviewCollectionViewCell")
+            return
+        }
+        
+        cell.configureWith(title: "This is a test")
+        
+        XCTAssertEqual(cell.titleLabel.text, "This is a test")
+    }
 }

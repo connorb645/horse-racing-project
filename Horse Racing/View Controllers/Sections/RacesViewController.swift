@@ -56,14 +56,14 @@ class RacesViewController: UIViewController, BottomSheetAttachable, StateChangeD
     /// configures the cells content,
     /// configures and keeps hold of the data source so we can apply snapshot changes in the future
     private func configureCollectionView() {
-        let registration = UICollectionView.CellRegistration<UICollectionViewListCell, Race> { cell, indexPath, race in
-            var content = cell.defaultContentConfiguration()
-            content.text = race.raceSummary.name
-            cell.contentConfiguration = content
-        }
+        racesView.collectionView.register(UINib(nibName: OverviewCollectionViewCell.reuseIdentifier, bundle: .main), forCellWithReuseIdentifier: OverviewCollectionViewCell.reuseIdentifier)
         
         dataSource = RacesDataSource(collectionView: racesView.collectionView) { collectionView, indexPath, race in
-            return collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: race)
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OverviewCollectionViewCell.reuseIdentifier, for: indexPath) as? OverviewCollectionViewCell else {
+                fatalError("Failed to deque reusable cell of type OverviewCollectionViewCell")
+            }
+            cell.configureWith(title: race.overview)
+            return cell
         }
     }
     
@@ -87,7 +87,7 @@ class RacesViewController: UIViewController, BottomSheetAttachable, StateChangeD
         var snapshot = NSDiffableDataSourceSnapshot<Section, Race>()
         snapshot.appendSections(Section.allCases)
         snapshot.appendItems(races)
-        dataSource?.apply(snapshot, animatingDifferences: true, completion: nil)
+        dataSource?.apply(snapshot)
     }
     
     // MARK: - StateChangeDelegate

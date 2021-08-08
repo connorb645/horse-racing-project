@@ -91,7 +91,6 @@ The relevant files are:
 - RacesViewController (UIViewController)
 - RacesViewModel (Class)
 - InsetGroupedCollectionView (UIView)
-- RacesViewModelDelegate (Protocol)
 
 ### RacesViewController
 
@@ -105,6 +104,10 @@ This View Model is responsible for getting the races data and notifying the View
 
 This View is a reusable view which displays a list of items in an inset grouped formation. The view also hosts the ability to show an informative message to the user if an error occurs, or if there is no data to show.
 
-### RacesViewModelDelegate
+## StateChangeDelegate
 
-This delegate is implemented by the RacesViewController so that it is notified of any noteworthy events raised by the RacesViewModel, namely when the state should change based on the result of the data fetch.
+This delegate is a reusable delegate which will provide state change information to its subscribers.
+
+## ReuseIdentifiable
+
+## OverviewCollectionViewCell

@@ -11,3 +11,9 @@ struct Race: Decodable, Equatable, Hashable {
     let raceSummary: RaceSummary
     let rides: [Ride]
 }
+
+extension Race {
+    var overview: String {
+        return "\(raceSummary.time) -- \(raceSummary.name) -- \(raceSummary.courseName)"
+    }
+}
