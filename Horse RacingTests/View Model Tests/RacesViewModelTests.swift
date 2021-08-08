@@ -73,7 +73,7 @@ class RacesViewModelTests: XCTestCase {
                 
         racesViewModel.fetchRaces()
         
-        XCTAssertEqual(racesViewModel.state, .successful(races: racesViewModel.races))
+        XCTAssertEqual(racesViewModel.state, .successful(items: racesViewModel.races))
     }
     
     

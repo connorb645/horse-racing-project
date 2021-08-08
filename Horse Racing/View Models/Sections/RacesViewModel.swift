@@ -7,23 +7,29 @@
 
 import Foundation
 
-class RacesViewModel {
-    
+protocol RacesViewModelAbstraction: AnyObject {
+    func setStateChangeDelegate(to sender: StateChangeDelegate)
+    func fetchRaces()
+}
+
+class RacesViewModel : RacesViewModelAbstraction {
     var races: [Race] = []
     
-    weak var delegate: RacesViewModelDelegate?
+    weak var stateChangeDelegate: StateChangeDelegate?
     
     private let dataFetcher: DataFetcher
     
     public var state: ViewState<Race> = .empty {
         didSet {
-            delegate?.receivedStateChange(state: state)
+            stateChangeDelegate?.stateChanged(to: state)
         }
     }
     
     init(dataFetcher: DataFetcher) {
         self.dataFetcher = dataFetcher
     }
+    
+    // MARK: - RacesViewModelAbstraction Conformance
     
     /// Fetches the races using the supplied data fetcher and then sets the view model state accordingly.
     func fetchRaces() {
@@ -44,5 +50,9 @@ class RacesViewModel {
                 return
             }
         }
+    }
+    
+    func setStateChangeDelegate(to sender: StateChangeDelegate) {
+        self.stateChangeDelegate = sender
     }
 }

@@ -8,7 +8,12 @@
 import Foundation
 import UIKit
 
-class InsetGroupedCollectionView: UIView {
+protocol InsetGroupedCollectionViewAbstraction: UIView {
+    var collectionView: UICollectionView { get }
+    func setState<T: Hashable>(_ state: ViewState<T>)
+}
+
+class InsetGroupedCollectionView: UIView, InsetGroupedCollectionViewAbstraction {
     lazy var collectionView: UICollectionView = {
         let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         let layout = UICollectionViewCompositionalLayout.list(using: configuration)
@@ -83,6 +88,7 @@ class InsetGroupedCollectionView: UIView {
     }
     
     private func setItemsState() {
+        textView.text = ""
         stackContainerView.isHidden = true
         collectionView.isHidden = false
     }

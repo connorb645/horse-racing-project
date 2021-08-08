@@ -7,36 +7,47 @@
 
 import UIKit
 
-class RacesViewController: UIViewController, BottomSheetAttachable, RacesViewModelDelegate {
+class RacesViewController: UIViewController, BottomSheetAttachable, StateChangeDelegate {
+    
+    typealias RacesDataSource = UICollectionViewDiffableDataSource<Section, Race>
     
     // MARK: - Properties
     
-    lazy var fileReader = FileReader()
-    lazy var jsonFileDecoder = JsonFileDecoder()
-    lazy var racesDataFetcher = RacesDataFetcher(fileReader: fileReader, jsonFileDecoder: jsonFileDecoder)
+    private let racesViewModel: RacesViewModelAbstraction
+    private let racesView: InsetGroupedCollectionViewAbstraction
+    private let raceDetailViewController: RaceDetailViewController
     
-    lazy var racesCollectionView = InsetGroupedCollectionView()
-    lazy var racesViewModel = RacesViewModel(dataFetcher: racesDataFetcher)
-    
-    var dataSource: UICollectionViewDiffableDataSource<Section, Race>?
+    private var dataSource: RacesDataSource?
     
     // MARK: - Life Cycle
     
+    init(viewModel: RacesViewModelAbstraction, view: InsetGroupedCollectionViewAbstraction, raceDetailViewController: RaceDetailViewController) {
+        self.racesViewModel = viewModel
+        self.racesView = view
+        self.raceDetailViewController = raceDetailViewController
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) is not supported")
+    }
+    
     override func loadView() {
-        view = racesCollectionView
+        view = racesView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
-        racesViewModel.delegate = self
+        racesViewModel.setStateChangeDelegate(to: self)
         configureCollectionView()
         racesViewModel.fetchRaces()
     }
     
     // MARK: - Configuration
     
-    func configureNavigationBar() {
+    private func configureNavigationBar() {
         title = "Races"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -44,14 +55,14 @@ class RacesViewController: UIViewController, BottomSheetAttachable, RacesViewMod
     /// Registers the cell with the collection view,
     /// configures the cells content,
     /// configures and keeps hold of the data source so we can apply snapshot changes in the future
-    func configureCollectionView() {
+    private func configureCollectionView() {
         let registration = UICollectionView.CellRegistration<UICollectionViewListCell, Race> { cell, indexPath, race in
             var content = cell.defaultContentConfiguration()
             content.text = race.raceSummary.name
             cell.contentConfiguration = content
         }
         
-        dataSource = UICollectionViewDiffableDataSource<Section, Race>(collectionView: racesCollectionView.collectionView) { collectionView, indexPath, race in
+        dataSource = RacesDataSource(collectionView: racesView.collectionView) { collectionView, indexPath, race in
             return collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: race)
         }
     }
@@ -63,9 +74,8 @@ class RacesViewController: UIViewController, BottomSheetAttachable, RacesViewMod
     ///   - races: The races to be displayed if the state is successful, otherwise races should be an empty array
     ///   - state: The current state of the view, determined by RacesViewModel
     private func populateDataSourceAndSetViewState(withRaces races: [Race], forState state: ViewState<Race>) {
-        populateDataSource(with: races) { [weak self] in
-            self?.racesCollectionView.setState(state)
-        }
+        racesView.setState(state)
+        populateDataSource(with: races)
     }
     
     /// Applies a new snapshot to the datasource in order to refresh the collection view.
@@ -73,16 +83,18 @@ class RacesViewController: UIViewController, BottomSheetAttachable, RacesViewMod
     ///   - races: The new array of races
     ///   - completion: Completion will be called when the dataSource animation changes have been made.
     /// - Returns: Void
-    private func populateDataSource(with races: [Race], completion: @escaping () -> ()) {
+    private func populateDataSource(with races: [Race]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Race>()
         snapshot.appendSections(Section.allCases)
         snapshot.appendItems(races)
-        dataSource?.apply(snapshot, animatingDifferences: true, completion: completion)
+        dataSource?.apply(snapshot, animatingDifferences: true, completion: nil)
     }
     
-    // MARK: - RacesViewModelDelegate
+    // MARK: - StateChangeDelegate
     
-    func receivedStateChange(state: ViewState<Race>) {
+    func stateChanged<T: Hashable>(to state: ViewState<T>) {
+        guard let state = state as? ViewState<Race> else { return }
+        
         switch state {
         case .successful(let races):
             populateDataSourceAndSetViewState(withRaces: races, forState: state)
@@ -95,7 +107,7 @@ class RacesViewController: UIViewController, BottomSheetAttachable, RacesViewMod
     
     var viewControllerToPresent: UIViewController {
         get {
-            return RacesViewController()
+            return raceDetailViewController
         }
     }
 }
