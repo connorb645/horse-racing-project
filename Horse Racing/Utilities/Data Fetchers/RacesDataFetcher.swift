@@ -9,7 +9,7 @@ import Foundation
 
 /// A subclass of the BaseDataFetcher which provides a default filename and filetype for the races data within the main bundle.
 class RacesDataFetcher: BaseDataFetcher {
-    init(fileReader: FileReader, jsonFileDecoder: JsonFileDecoder) {
+    init(fileReader: FileReader = FileReader(), jsonFileDecoder: JsonFileDecoder = JsonFileDecoder()) {
         super.init(fileName: "RacesData",
                    fileType: .json,
                    fileReader: fileReader,

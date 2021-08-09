@@ -47,10 +47,7 @@ class SortManagerTests: XCTestCase {
         
         let sortManager = SortManager()
         
-        let oddsParser = OddsParser()
-        let oddsComparer = OddsComparer()
-        let oddsSorter = OddsSorter(oddsParser: oddsParser, oddsComparer: oddsComparer)
-        let sortedRides = sortManager.sort(rides, using: oddsSorter)
+        let sortedRides = sortManager.sort(rides, using: OddsSorter())
         
         XCTAssertEqual(sortedRides.count, 4)
         
@@ -58,26 +55,14 @@ class SortManagerTests: XCTestCase {
             guard i != 0 else { continue }
             
             let oddsComparer = OddsComparer()
-            
-            let odds1 = parseOddsFromString(odds: sortedRides[i - 1].currentOdds)
-            let odds2 = parseOddsFromString(odds: ride.currentOdds)
+            let oddsParserHelper = OddsParserHelper() // Tests helper object
+            let odds1 = oddsParserHelper.parseOddsFromString(odds: sortedRides[i - 1].currentOdds)
+            let odds2 = oddsParserHelper.parseOddsFromString(odds: ride.currentOdds)
             
             let comparisonResult = oddsComparer.compare(odds1, odds2)
             
-            XCTAssertTrue(comparisonResult == .odds1Better)
+            XCTAssertTrue(comparisonResult == .odds1Better || comparisonResult == .equal)
         }
-    }
-    
-    func parseOddsFromString(odds: String) -> Odds {
-        let oddsParser = OddsParser()
-        
-        let oddsString = odds
-        
-        guard let odds = oddsParser.parse(oddsString) else {
-            XCTFail("Couldn't parse odds from string to valid Odds object.")
-            fatalError()
-        }
-        return odds
     }
 
 }

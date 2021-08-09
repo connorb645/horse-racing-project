@@ -12,7 +12,7 @@ struct OddsSorter: Sorter {
     let oddsParser: OddsParser
     let oddsComparer: OddsComparer
     
-    init(oddsParser: OddsParser, oddsComparer: OddsComparer) {
+    init(oddsParser: OddsParser = OddsParser(), oddsComparer: OddsComparer = OddsComparer()) {
         self.oddsParser = oddsParser
         self.oddsComparer = oddsComparer
     }

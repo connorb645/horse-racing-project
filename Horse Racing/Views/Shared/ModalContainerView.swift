@@ -27,8 +27,20 @@ class ModalContainerView: UIView {
         return view
     }()
     
+    /// The small handle view to show the container is draggable
+    lazy private var handleView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        view.alpha = 0.15
+        view.layer.cornerRadius = handleViewHeight / 2
+        return view
+    }()
+    
     private var containerViewHeightConstraint: NSLayoutConstraint?
     private var containerViewBottomConstraint: NSLayoutConstraint?
+    
+    private let handleViewHeight: CGFloat = 6
+    private let handleViewWidth: CGFloat = 45
     
     lazy private var dimmedViewTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap))
     
@@ -83,9 +95,11 @@ class ModalContainerView: UIView {
         addSubview(dimmedView)
         addSubview(containerView)
         containerView.addSubview(childViewController.view)
+        containerView.addSubview(handleView)
         
         dimmedView.translatesAutoresizingMaskIntoConstraints = false
         containerView.translatesAutoresizingMaskIntoConstraints = false
+        handleView.translatesAutoresizingMaskIntoConstraints = false
         
         dimmedView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         dimmedView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
@@ -101,7 +115,12 @@ class ModalContainerView: UIView {
         containerViewHeightConstraint?.isActive = true
         containerViewBottomConstraint?.isActive = true
         
-        childViewController.view.anchor(top: containerView.topAnchor, bottom: containerView.bottomAnchor, left: containerView.leftAnchor, right: containerView.rightAnchor)
+        handleView.widthAnchor.constraint(equalToConstant: handleViewWidth).isActive = true
+        handleView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
+        handleView.heightAnchor.constraint(equalToConstant: handleViewHeight).isActive = true
+        handleView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20).isActive = true
+        
+        childViewController.view.anchor(top: handleView.topAnchor, paddingTop: 20, bottom: containerView.bottomAnchor, left: containerView.leftAnchor, right: containerView.rightAnchor)
     }
     
     func configurePanGestureRecognizer() {

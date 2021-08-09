@@ -30,7 +30,7 @@ extension BottomSheetDataSource {
     
     /// A sensible default for the default height
     var defaultHeight: CGFloat {
-        return 300
+        return 400
     }
     
     /// A sensible default for the dismissible height threshold
