@@ -34,13 +34,12 @@ class RacesViewControllerTests: XCTestCase {
     
     private var SUT: (RacesViewControllerPartialMock, InsetGroupedCollectionViewPartialMock) {
         get {
-            let raceDetailViewController = RaceDetailViewController()
             let racesView = InsetGroupedCollectionViewPartialMock()
             let fileReader = FileReader(inBundle: Bundle.init(for: type(of: self)))
             let jsonFileDecoder = JsonFileDecoder()
             let dataFetcher = FakeDataFetcher(fileReader: fileReader, jsonFileDecoder: jsonFileDecoder)
             let viewModel = RacesViewModel(dataFetcher: dataFetcher)
-            return (RacesViewControllerPartialMock(viewModel: viewModel, view: racesView, raceDetailViewController: raceDetailViewController),
+            return (RacesViewControllerPartialMock(viewModel: viewModel, view: racesView),
                     racesView)
         }
     }
