@@ -10,6 +10,7 @@ import SwiftUI
 struct RaceDetailView: View {
     
     @ObservedObject var viewModel: RaceDetailViewModel
+    @Environment(\.openURL) var openURL
     
     init(viewModel: RaceDetailViewModel) {
         self.viewModel = viewModel
@@ -25,7 +26,7 @@ struct RaceDetailView: View {
                 .cornerRadius(10)
                 .frame(maxWidth: .infinity)
                 
-                SegmentedControl(selections: ["Odds", "Cloth Number"]) { selectedIndex in
+                SegmentedControl(selections: ["Odds", "Cloth Number", "Form"]) { selectedIndex in
                     viewModel.sortRides(as: RideSort(rawValue: selectedIndex) ?? .odds)
                 }
                 
@@ -103,18 +104,21 @@ struct RaceDetailView: View {
                 
                 VStack {
                     Spacer()
-                    capsuleText(ride.currentOdds)
-                        .frame(width: 80)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Capsule().foregroundColor(.pink))
                     
+                    Button(ride.currentOdds) {
+                        
+                        #warning("Remove string literal")
+                        guard let url = URL(string: "https://m.skybet.com/horse-racing") else { return }
+                        
+                        openURL(url)
+                    }
+                    .foregroundColor(.white)
+                    .frame(width: 100, height: 50)
+                    .background(Capsule().foregroundColor(.pink))
                 }
             }
             .padding()
-            
-            
-            
+                        
             Rectangle()
                 .foregroundColor(.gray.opacity(0.15))
                 .frame(height: 5)
