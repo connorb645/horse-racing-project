@@ -2,7 +2,9 @@
 
 In this README.md I will outline any information I think will be helpful about my implementations. I will structure the readme split up by implementations, in an order which closely follows the order I implemented them.
 
-Throughout the implementation of this I've tried to stick to TDD as much as possible and I've followed an MVVM pattern since it's what I'm most familiar with.
+Throughout the implementation of this I've tried to stick to TDD as much as possible and I've followed an MVVM pattern since it's what I'm most familiar with. I built the Races List screen and anything relating to it using UIKit, and I built the Races Detail screen and anything relating to it using SwiftUI, the reason for this was that I know UIKit is preferred currently, but also I didn't want to completely disclude SwiftUI since it's pretty up and coming.
+
+The Widget is built using SwiftUI since that's the only option.
 
 ## App Bootstrapper
 
