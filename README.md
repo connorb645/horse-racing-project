@@ -6,6 +6,8 @@ Throughout the implementation of this I've tried to stick to TDD as much as poss
 
 ## App Bootstrapper
 
+I like to create an App Bootstrapper class which essentially configures the initial screen and any dependencies it requires. This helps keep the App Delegate clean.
+
 ## The File Reader
 
 I opted for a statically embedded file in order to host my json data. I therefore needed to make sure I could read the data from the file itself before any decoding could be done. I wanted to create a layer of abstraction on top of the default way to read data from a bundle. 
@@ -111,16 +113,78 @@ This View is a reusable view which displays a list of items in an inset grouped 
 
 This delegate is a reusable delegate which will provide state change information to its subscribers.
 
-## ReuseIdentifiable
+## Reuse Identifiable
+
+This protocol and protocol extension can be applied to cells which we know need a reuse identifier, and it will by default give the cell the reuse identifier of the class name in order to keep things consistent and avoid String literals polluting the code base.
 
 ## OverviewCollectionViewCell
 
+I've built this cell using a .xib and auto layout to show I know how to do so, and register, and deque them into the Collection View (I know it isn't complex in this scenario). The cell has been given a generic name and it's properties are all generic for the purpose of being able to reuse this cell elsewhere.
+
 ## Race Detail
+
+The section of the app which shows race details, and a sortable list of rides.
 
 ### RaceDetailViewModel
 
+This class is required to fetch the default rides from the selected race object and sort them (via odds by default). The class is also inherits from ObservableObject so that I'm able to listen to changes made on Published properties in order to update the UI automatically (this is super helpful for rendering sort changes).
+
+When the user selects a different sorting method, the sortRides() function is triggered, which sorts the rides based on the opted sorting method, and then sets the Published array of rides as the new sorted list, which in turn updates the UI automatically.
+
 ### RaceDetailView
+
+The screen which displays the UI elements for a race summary and a sortable list of rides.
 
 ## Ride Sorting
 
+### Sorter
 
+This protocol effectively gives the adopters the power of determining which ride preceeds one-another out of two rides, which can then be used to sort an array of rides. This means we can create a new sorting condition for each sorting method.
+
+### SortManager
+
+This struct sorts the rides based on the condition that the supplied Sorter determines.
+
+### OddsSorter
+
+This Sorter implements the Sorter protocol and uses the OddsParser to parse the each Odd from a String to an Odd object, and it also uses OddsComparer to determine the condition for which Odd should preceed.
+
+### ClothNumberSorter
+
+This sorter implements the Sorter protocol and simply determines which Ride should preceed based on the clothNumber property which is a simple Int comparison.
+
+### FormSorter
+
+This sorter implements the Sorter protocol and uses the FormParser to convert the formsummary String to a workable Form object. This struct also uses the FormScoreCalculator which calculates the total score for a given Form.
+
+The Ride with the better score should preceed in this case.
+
+### Odds
+
+A simple model which holds 2 integers which reperesent the numerator and denominator of the Odds.
+
+### OddsComparison
+
+This enum details the possible results of comparing two odds with one another.
+
+### OddsComparer
+
+This struct takes in two Odds and returns an OddsComparison, allowing me to effectively compare two odds.
+
+### OddsParser
+
+This struct is used to simply convert a String to a workable Odds object.
+
+### FormParser
+
+This struct is used to simply convert a String to a workable Form object.
+
+### FormScoreCalculator
+
+This struct is used to calculate the total score given a Form.
+
+** I didn't know how to actually determine how good a form was based oin some research. Therefore I've implemented my own take on calculating a score. Effectively "-" & "0" are assigned a placement of "10" and then I simply calculate the mean average, the lowest total score wins.
+
+## Home Screen Widget
+
+As the extra feature challenge, I decided to build a simple widget for the home screen. In this case the widget simply picks a random race from the data set contained within the main bundle and displays a race overview, with a Timeline to change every hour.
