@@ -13,11 +13,14 @@ struct RaceWidgetView: View {
     var body: some View {
         ZStack {
             Color.gray.opacity(0.2)
-            VStack {
-                Text(race?.overview ?? "No Race Found")
-                    .foregroundColor(.white)
+            VStack(alignment: .center, spacing: 16) {
+                SubTitleTextView(text: race?.overview ?? "No Race Found", alignment: .center)
                 
-                Text(race?.rides.first?.currentOdds ?? "No favourite")
+                VStack(alignment: .center, spacing: 4) {
+                    SubTitleTextView(text: race?.rides.first?.horse.name ?? "No favourite", textColor: .gray, alignment: .center)
+                    
+                    TitlePillButton(title: race?.rides.first?.currentOdds ?? "No Odds", width: 80) {}
+                }
             }
             
         }

@@ -62,5 +62,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>SkyBetUrl</key>
+	<string>$(SKY_BET_URL)</string>
 </dict>
 </plist>

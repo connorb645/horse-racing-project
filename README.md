@@ -187,4 +187,4 @@ This struct is used to calculate the total score given a Form.
 
 ## Home Screen Widget
 
-As the extra feature challenge, I decided to build a simple widget for the home screen. In this case the widget simply picks a random race from the data set contained within the main bundle and displays a race overview, with a Timeline to change every hour.
+As the extra feature challenge, I decided to build a simple widget for the home screen. In this case the widget simply picks a random race from the data set contained within the main bundle and displays a race overview and the first horse in the array, with a Timeline to change every hour.

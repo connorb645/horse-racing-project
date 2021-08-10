@@ -32,8 +32,9 @@ struct RideListItemView: View {
                     Spacer()
                     
                     TitlePillButton(title: ride.currentOdds, width: 100) {
-                        #warning("Sort out string literal")
-                        guard let url = URL(string: "https://m.skybet.com/horse-racing") else { return }
+                        guard let url = Bundle.main.object(forInfoDictionaryKey: "SkyBetUrl") as? String else { return }
+
+                        guard let url = URL(string: url) else { return }
                         
                         openURL(url)
                     }

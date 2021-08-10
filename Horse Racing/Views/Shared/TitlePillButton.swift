@@ -21,7 +21,7 @@ struct TitlePillButton: View {
                 action()
             }
             .foregroundColor(.white)
-            .frame(width: width)
+            .frame(width: width, height: 50)
             .background(Capsule().foregroundColor(.pink))
         } else {
             Button(title) {
@@ -29,6 +29,7 @@ struct TitlePillButton: View {
             }
             .foregroundColor(.white)
             .frame(maxWidth: .infinity)
+            .frame(height: 50)
             .background(Capsule().foregroundColor(.pink))
         }
     }

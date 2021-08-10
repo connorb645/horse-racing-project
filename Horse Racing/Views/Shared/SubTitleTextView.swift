@@ -11,15 +11,17 @@ struct SubTitleTextView: View {
     
     let text: String
     let textColor: Color
+    let alignment: Alignment
     
-    init(text: String, textColor: Color = .black) {
+    init(text: String, textColor: Color = .black, alignment: Alignment = .leading) {
         self.text = text
         self.textColor = textColor
+        self.alignment = alignment
     }
     
     var body: some View {
         Text(text)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: alignment)
             .font(.subheadline.bold())
             .foregroundColor(textColor)
     }
