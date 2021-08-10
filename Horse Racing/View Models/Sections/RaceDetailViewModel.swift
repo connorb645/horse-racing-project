@@ -25,6 +25,8 @@ class RaceDetailViewModel: ObservableObject {
         self.rides = sortManager.sort(race.rides, using: OddsSorter())
     }
     
+    /// Sorts the rides in the list displayed on the UI since rides is a published property
+    /// - Parameter sort: Defines the method of sorting.
     func sortRides(as sort: RideSort) {
         var sorter: Sorter!
         

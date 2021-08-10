@@ -24,6 +24,7 @@ struct SegmentedControl: View {
                 Button(selection) {
                     withAnimation {
                         selectedIndex = index ?? 0
+                        /// Including the action in the animation will give us the animated list refresh which is nice
                         action(selectedIndex)
                     }
                 }

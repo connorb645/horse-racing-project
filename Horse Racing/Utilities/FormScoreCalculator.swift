@@ -9,6 +9,12 @@ import Foundation
 
 struct FormScoreCalculator {
     
+    let decimalPlacesService: DecimalPlacesService
+    
+    init(decimalPlacesService: DecimalPlacesService = DecimalPlacesService()) {
+        self.decimalPlacesService = decimalPlacesService
+    }
+    
     /// In my made up score calculation I'm assigning a place of 10 to any race result which was 0 or a dash
     /// (The dash is replaced with a zero by this point whence why i don't check)
     /// I then simply calculate the mean average and the lower the result the better.
@@ -26,7 +32,6 @@ struct FormScoreCalculator {
         
         score = score / Double(form.raceResults.count)
         
-        #warning("Add this to it's own service with it's own tests.")
-        return round(100 * score) / 100
+        return decimalPlacesService.roundTo2DecimalPlaces(score)
     }
 }

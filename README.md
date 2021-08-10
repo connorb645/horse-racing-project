@@ -2,6 +2,10 @@
 
 In this README.md I will outline any information I think will be helpful about my implementations. I will structure the readme split up by implementations, in an order which closely follows the order I implemented them.
 
+Throughout the implementation of this I've tried to stick to TDD as much as possible and I've followed an MVVM pattern since it's what I'm most familiar with.
+
+## App Bootstrapper
+
 ## The File Reader
 
 I opted for a statically embedded file in order to host my json data. I therefore needed to make sure I could read the data from the file itself before any decoding could be done. I wanted to create a layer of abstraction on top of the default way to read data from a bundle. 
@@ -58,9 +62,8 @@ This protocol also ensures that BottomSheetDataSource is implemented on the pres
 A protocol that asks its implementor for required data points needed in order to attach a bottom sheet:
     - viewControllerToPresent (Required): The View Controller which will be displayed within the bottom sheet.
     - backgroundDim (Required, Default = 0.6): The opacity value on the dimmed background. 
-    - defaultHeight (Required, Default= 300): The default height of the bottom sheet container view.
-    - dismissibleHeight (Required, Default = 200): The height at which the bottom sheet will be dismissed.
-    - topPadding (Required, Default = 64): The amount of top padding on the bottom sheet container view.
+    - defaultVisibility (Required, Default= 0.5): The percentage of how much of the bottom sheet is visible by default.
+    - topPadding (Required, Default = 100): The amount of top padding on the bottom sheet container view.
 
 ## Data Fetcher
 
@@ -111,3 +114,13 @@ This delegate is a reusable delegate which will provide state change information
 ## ReuseIdentifiable
 
 ## OverviewCollectionViewCell
+
+## Race Detail
+
+### RaceDetailViewModel
+
+### RaceDetailView
+
+## Ride Sorting
+
+

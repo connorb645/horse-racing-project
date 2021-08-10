@@ -15,4 +15,18 @@ class RacesDataFetcher: BaseDataFetcher {
                    fileReader: fileReader,
                    jsonFileDecoder: jsonFileDecoder)
     }
+    
+    
+    /// Method to fetch a random race, or nil if an error was hit
+    /// - Returns: Random race
+    func fetchRandomRace() -> Race? {
+        let result: Result<[Race], DataFetcherError> = self.fetchData()
+        
+        switch result {
+        case .success(let races):
+            return races.randomElement()
+        default:
+            return nil
+        }
+    }
 }
