@@ -16,27 +16,29 @@ struct RaceDetailView: View {
     }
     
     var body: some View {
-        ZStack {
-            VStack {
-                /// ScrollView -> LazyVStack is a workaround to get a list without seperators.
-                ScrollView {
-                    LazyVStack {
-                        VStack {
-                            raceSummaryContainer
-                        }
-                        .cornerRadius(10)
-                        .frame(maxWidth: .infinity)
-                        
-                        ForEach(viewModel.rides) { ride in
-                            listCell(ride)
-                        }
-                    }
-                    .padding()
+        /// ScrollView -> LazyVStack is a workaround to get a list without seperators, while maintaining performance.
+        ScrollView {
+            LazyVStack {
+                VStack {
+                    raceSummaryContainer
+                }
+                .cornerRadius(10)
+                .frame(maxWidth: .infinity)
+                
+                SegmentedControl(selections: ["Odds", "Cloth Number"]) { selectedIndex in
+                    viewModel.sortRides(as: RideSort(rawValue: selectedIndex) ?? .odds)
+                }
+                
+                ForEach(viewModel.rides) { ride in
+                    listCell(ride)
                 }
             }
+            .padding()
         }
+        .edgesIgnoringSafeArea(.top)
     }
     
+    #warning("Split this out into a reusable view")
     var raceSummaryContainer: some View {
         ZStack {
             Color.gray.opacity(0.1)
@@ -59,35 +61,36 @@ struct RaceDetailView: View {
         }
     }
     
+    #warning("Split this out into a reusable view")
     func titleText(_ text: String) -> some View {
         Text(text)
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.title.bold())
     }
-    
+    #warning("Split this out into a reusable view")
     func subTitleText(_ text: String, textColor: Color = .gray) -> some View {
         Text(text)
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.subheadline.bold())
             .foregroundColor(textColor)
     }
-    
+    #warning("Split this out into a reusable view")
     func bodyText(_ text: String) -> some View {
         Text(text)
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.body)
     }
-    
+    #warning("Split this out into a reusable view")
     func capsuleText(_ text: String) -> some View {
         Text(text)
             .frame(maxWidth: .infinity, alignment: .center)
             .font(.body.bold())
     }
     
+    #warning("Split this out into a reusable view")
     func listCell(_ ride: Ride) -> some View {
         VStack {
             HStack {
-                
                 VStack(spacing: 6) {
                     groupedTitleText("Horse Name", body: "\(ride.horse.name)", spacing: 4)
                     groupedTitleText("Horse Age", body: "\(ride.horse.age)", spacing: 4)
@@ -107,8 +110,6 @@ struct RaceDetailView: View {
                         .background(Capsule().foregroundColor(.pink))
                     
                 }
-                
-                    
             }
             .padding()
             

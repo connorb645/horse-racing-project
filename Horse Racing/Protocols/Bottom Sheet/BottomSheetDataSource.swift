@@ -14,10 +14,8 @@ protocol BottomSheetDataSource: AnyObject {
     var viewControllerToPresent: UIViewController? { get }
     /// Ask the presenting View Controller to supply how dim the background should be for the space above the bottom sheet.
     var backgroundDim: CGFloat { get }
-    /// Ask the presenting View Controller to supply how tall the bottom sheet should be by default.
-    var defaultHeight: CGFloat { get }
-    /// Ask the presenting View Controller to supply the threshold for which the bottom sheet should dismiss on drag.
-    var dismissibleHeight: CGFloat { get }
+    /// Ask the presenting View Controller to supply what percentage of the container view is visible
+    var defaultVisibility: CGFloat { get }
     /// Ask the presenting View Controller to supply the amount of top space should remain when the bottom sheet is fully expanded.
     var topPadding: CGFloat { get }
 }
@@ -29,17 +27,12 @@ extension BottomSheetDataSource {
     }
     
     /// A sensible default for the default height
-    var defaultHeight: CGFloat {
-        return 400
-    }
-    
-    /// A sensible default for the dismissible height threshold
-    var dismissibleHeight: CGFloat {
-        return 200
+    var defaultVisibility: CGFloat {
+        return 0.5
     }
     
     /// A sensible default for the top padding
     var topPadding: CGFloat {
-        return 64
+        return 100
     }
 }

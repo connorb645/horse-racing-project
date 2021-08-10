@@ -20,8 +20,8 @@ class ModalContainerViewController: UIViewController, ModalContainerViewDelegate
         
         addChild(viewControllerToPresent)
         
-        modalContainerView = ModalContainerView(childViewController: viewControllerToPresent, backgroundDim: dataSource.backgroundDim, defaultHeight: dataSource.defaultHeight, dismissibleHeight: dataSource.dismissibleHeight, topPaddingWhenExpanded: dataSource.topPadding, delegate: self)
-        
+        modalContainerView = ModalContainerView(childViewController: viewControllerToPresent, backgroundDim: dataSource.backgroundDim, topPaddingWhenExpanded: dataSource.topPadding, defaultVisibility: dataSource.defaultVisibility, delegate: self)
+                
         view = modalContainerView
     }
     

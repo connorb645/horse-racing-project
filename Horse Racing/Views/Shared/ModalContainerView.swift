@@ -12,7 +12,7 @@ class ModalContainerView: UIView {
     /// The container view which will host the provided view controller
     lazy private var containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGroupedBackground
         view.layer.cornerRadius = 16
         view.clipsToBounds = true
         return view
@@ -30,26 +30,26 @@ class ModalContainerView: UIView {
     /// The small handle view to show the container is draggable
     lazy private var handleView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
-        view.alpha = 0.15
+        view.backgroundColor = .gray
+        view.alpha = 0.2
         view.layer.cornerRadius = handleViewHeight / 2
         return view
     }()
     
-    private var containerViewHeightConstraint: NSLayoutConstraint?
     private var containerViewBottomConstraint: NSLayoutConstraint?
     
     private let handleViewHeight: CGFloat = 6
     private let handleViewWidth: CGFloat = 45
     
     lazy private var dimmedViewTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap))
-    
-    private var maximumContainerHeight: CGFloat
-    private var currentContainerHeight: CGFloat
         
-    private(set) var backgroundDim: CGFloat
-    private(set) var defaultHeight: CGFloat
-    private(set) var dismissibleHeight: CGFloat
+    private var currentBottomConstraint: CGFloat
+    private let containerHeight: CGFloat
+    private let defaultBottomConstraint: CGFloat
+    private let defaultVisibility: CGFloat
+    private let dismissBottomConstraint: CGFloat
+    private let backgroundDim: CGFloat
+    
     private(set) weak var delegate: ModalContainerViewDelegate?
     
     /// Initializer used to create a ModalContainerView
@@ -61,17 +61,19 @@ class ModalContainerView: UIView {
     ///   - topPaddingWhenExpanded: The amount of top padding when the container view is fully expanded along the y axis
     ///   - delegate: The delegate which will handle any action events
     init(childViewController: UIViewController,
-         backgroundDim: CGFloat = 0.6,
-         defaultHeight: CGFloat = 300.0,
-         dismissibleHeight: CGFloat = 200,
-         topPaddingWhenExpanded: CGFloat = 64,
+         backgroundDim: CGFloat,
+         topPaddingWhenExpanded: CGFloat,
+         defaultVisibility: CGFloat,
          delegate: ModalContainerViewDelegate?) {
         
         self.backgroundDim = backgroundDim
-        self.defaultHeight = defaultHeight
-        self.dismissibleHeight = dismissibleHeight
-        self.currentContainerHeight = defaultHeight
-        self.maximumContainerHeight = UIScreen.main.bounds.height - topPaddingWhenExpanded
+        self.defaultVisibility = 0.4
+        let dismissThreshold: CGFloat = 0.2
+        self.containerHeight = UIScreen.main.bounds.height - topPaddingWhenExpanded
+        self.currentBottomConstraint = (1.0 - self.defaultVisibility) * self.containerHeight
+        self.defaultBottomConstraint = self.currentBottomConstraint
+        self.dismissBottomConstraint = (1.0 - dismissThreshold) * self.containerHeight
+        
         self.delegate = delegate
         
         super.init(frame: .zero)
@@ -108,11 +110,9 @@ class ModalContainerView: UIView {
         
         containerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         containerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        containerView.heightAnchor.constraint(equalToConstant: containerHeight).isActive = true
+        containerViewBottomConstraint = containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: defaultBottomConstraint)
         
-        containerViewHeightConstraint = containerView.heightAnchor.constraint(equalToConstant: defaultHeight)
-        containerViewBottomConstraint = containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: defaultHeight)
-        
-        containerViewHeightConstraint?.isActive = true
         containerViewBottomConstraint?.isActive = true
         
         handleView.widthAnchor.constraint(equalToConstant: handleViewWidth).isActive = true
@@ -120,7 +120,7 @@ class ModalContainerView: UIView {
         handleView.heightAnchor.constraint(equalToConstant: handleViewHeight).isActive = true
         handleView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20).isActive = true
         
-        childViewController.view.anchor(top: handleView.topAnchor, paddingTop: 20, bottom: containerView.bottomAnchor, left: containerView.leftAnchor, right: containerView.rightAnchor)
+        childViewController.view.anchor(top: handleView.bottomAnchor, paddingTop: 20, bottom: containerView.bottomAnchor, left: containerView.leftAnchor, right: containerView.rightAnchor)
     }
     
     func configurePanGestureRecognizer() {
@@ -134,53 +134,45 @@ class ModalContainerView: UIView {
         let translation = gesture.translation(in: self)
         let isDraggingDown = translation.y > 0
         
-        // Figure out the new height of the container
-        let newHeight = currentContainerHeight - translation.y
-        
+        let newBottomConstraint = currentBottomConstraint + translation.y
+                
         switch gesture.state {
         case .changed: // When dragging
-            if newHeight < maximumContainerHeight {
-                // We are safe to keep updating the container height
-                containerViewHeightConstraint?.constant = newHeight
+            // If the constraint is 0, we have dragged the view out to the top
+            if newBottomConstraint >= 0 {
+                containerViewBottomConstraint?.constant = newBottomConstraint
                 layoutIfNeeded()
             }
         case .ended: // Stopped dragging
-            // If we stopped with a height less than our dismissible height, we should dismiss the view
-            if newHeight < dismissibleHeight {
-                // Call the delegating action and let the observer handle the rest
+            if newBottomConstraint > dismissBottomConstraint {
                 delegate?.dismissModal()
-            }
-            else if newHeight < defaultHeight {
-                // If the height is still below the default height, set it back to the default height, with an animation
-                animateContainer(toHeight: defaultHeight)
-            }
-            else if newHeight < maximumContainerHeight && isDraggingDown {
-                // If the height is below the maximum and we are dragging down, set to the default height, with an animation
-                animateContainer(toHeight: defaultHeight)
-            }
-            else if newHeight > defaultHeight && !isDraggingDown {
-                // If the height is below the maximum and we are dragging up, set to the max height, with an animation
-                animateContainer(toHeight: maximumContainerHeight)
+            } else if newBottomConstraint > defaultBottomConstraint {
+                animateContainer(toBottomConstraint: defaultBottomConstraint)
+            } else if newBottomConstraint >= 0 && isDraggingDown {
+                animateContainer(toBottomConstraint: defaultBottomConstraint)
+            } else if newBottomConstraint >= 0 && !isDraggingDown {
+                animateContainer(toBottomConstraint: 0)
             }
         default:
             break
         }
     }
     
-    func animateContainer(toHeight height: CGFloat) {
+    func animateContainer(toBottomConstraint constant: CGFloat) {
         UIView.animate(withDuration: 0.4) {
-            self.containerViewHeightConstraint?.constant = height
+            self.containerViewBottomConstraint?.constant = constant
             self.layoutIfNeeded()
         }
-        currentContainerHeight = height
+        currentBottomConstraint = constant
     }
-    
     
     /// This will be called from this views controlling View Controller in the viewDidAppear()
     /// After presenting this views controlling View Controller without animation, this method will nicely transition in the relevant views.
     func animatePresentation() {
+        containerViewBottomConstraint?.constant = containerHeight
+        self.layoutIfNeeded()
         UIView.animate(withDuration: 0.3) {
-            self.containerViewBottomConstraint?.constant = 0
+            self.containerViewBottomConstraint?.constant = self.defaultBottomConstraint
             self.layoutIfNeeded()
         }
         
@@ -195,7 +187,7 @@ class ModalContainerView: UIView {
     /// views have been transitioned off-screen.
     func animateDismissal(completion: @escaping () -> ()) {
         UIView.animate(withDuration: 0.3) {
-            self.containerViewBottomConstraint?.constant = self.defaultHeight
+            self.containerViewBottomConstraint?.constant = self.containerHeight
             self.layoutIfNeeded()
         }
         

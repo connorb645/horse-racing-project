@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+enum RideSort: Int {
+    case odds, clothNumber
+}
+
 class RaceDetailViewModel: ObservableObject {
     
     @Published var race: Race
@@ -19,6 +23,11 @@ class RaceDetailViewModel: ObservableObject {
         self.sortManager = sortManager
         
         self.rides = sortManager.sort(race.rides, using: OddsSorter())
+    }
+    
+    func sortRides(as sort: RideSort) {
+        let sorter: Sorter = sort == .clothNumber ? ClothNumberSorter() : OddsSorter()
+        rides = sortManager.sort(rides, using: sorter)
     }
 
 }

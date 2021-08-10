@@ -64,5 +64,32 @@ class SortManagerTests: XCTestCase {
             XCTAssertTrue(comparisonResult == .odds1Better || comparisonResult == .equal)
         }
     }
+    
+    func testCanSortByFormSummary() {
+        let rides = rides
+        
+        XCTAssertEqual(rides.count, 4)
+        
+        let sortManager = SortManager()
+        
+        let sortedRides = sortManager.sort(rides, using: FormSorter())
+        
+        XCTAssertEqual(sortedRides.count, 4)
+        
+        for (i, ride) in sortedRides.enumerated() {
+            guard i != 0 else { continue }
+            
+            let formParser = FormParser()
+            let formScoreCalculator = FormScoreCalculator()
+            
+            let form1 = formParser.parse(sortedRides[i - 1].formsummary)
+            let form2 = formParser.parse(ride.formsummary)
+            
+            let formScore1 = formScoreCalculator.calculateScore(fromForm: form1)
+            let formScore2 = formScoreCalculator.calculateScore(fromForm: form2)
+            
+            XCTAssertTrue(formScore1 < formScore2)
+        }
+    }
 
 }
