@@ -1,0 +1,1267 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C32489DE26C1161C00AC14E8 /* SortManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489DD26C1161C00AC14E8 /* SortManager.swift */; };
+		C32489E126C1199C00AC14E8 /* ClothNumberSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489E026C1199C00AC14E8 /* ClothNumberSorter.swift */; };
+		C32489E326C11EB700AC14E8 /* OddsSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489E226C11EB700AC14E8 /* OddsSorter.swift */; };
+		C32489E526C11ECF00AC14E8 /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489E426C11ECF00AC14E8 /* Sorter.swift */; };
+		C32489E926C1233B00AC14E8 /* OddsComparerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489E826C1233B00AC14E8 /* OddsComparerTests.swift */; };
+		C32489EB26C141FB00AC14E8 /* OddsParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489EA26C141FB00AC14E8 /* OddsParserTests.swift */; };
+		C32489ED26C142A500AC14E8 /* OddsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489EC26C142A500AC14E8 /* OddsParser.swift */; };
+		C32489EF26C14AB000AC14E8 /* OddsComparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489EE26C14AB000AC14E8 /* OddsComparer.swift */; };
+		C32489F226C14B1A00AC14E8 /* OddsComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489F126C14B1A00AC14E8 /* OddsComparison.swift */; };
+		C32489F426C1A61A00AC14E8 /* Odds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489F326C1A61A00AC14E8 /* Odds.swift */; };
+		C32489F726C1B71E00AC14E8 /* OddsParserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489F626C1B71E00AC14E8 /* OddsParserHelper.swift */; };
+		C39D7BB926B418F800499C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BB826B418F800499C15 /* AppDelegate.swift */; };
+		C39D7BBB26B418F800499C15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BBA26B418F800499C15 /* SceneDelegate.swift */; };
+		C39D7BBD26B418F800499C15 /* RacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BBC26B418F800499C15 /* RacesViewController.swift */; };
+		C39D7BC026B418F800499C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39D7BBE26B418F800499C15 /* Main.storyboard */; };
+		C39D7BC226B418FC00499C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39D7BC126B418FC00499C15 /* Assets.xcassets */; };
+		C39D7BC526B418FC00499C15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39D7BC326B418FC00499C15 /* LaunchScreen.storyboard */; };
+		C39D7BD026B418FC00499C15 /* Horse_RacingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BCF26B418FC00499C15 /* Horse_RacingTests.swift */; };
+		C39D7BEC26B46E3400499C15 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BEB26B46E3400499C15 /* FileReader.swift */; };
+		C39D7BF026B4720C00499C15 /* FileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BEF26B4720C00499C15 /* FileError.swift */; };
+		C39D7BF226B473ED00499C15 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BF126B473ED00499C15 /* FileType.swift */; };
+		C39D7BF526B4747800499C15 /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BF426B4747800499C15 /* FileReaderTests.swift */; };
+		C39D7BF726B47C9800499C15 /* JsonFileDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BF626B47C9800499C15 /* JsonFileDecoderTests.swift */; };
+		C39D7BFA26B47EF700499C15 /* SimpleDataStructureData.json in Resources */ = {isa = PBXBuildFile; fileRef = C39D7BF926B47EF700499C15 /* SimpleDataStructureData.json */; };
+		C39D7BFC26B47FDB00499C15 /* JsonFileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BFB26B47FDB00499C15 /* JsonFileDecoder.swift */; };
+		C39D7BFE26B4859000499C15 /* JsonDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BFD26B4859000499C15 /* JsonDecodingError.swift */; };
+		C39D7C0226B4889F00499C15 /* SimpleModelsData.json in Resources */ = {isa = PBXBuildFile; fileRef = C39D7C0126B4889F00499C15 /* SimpleModelsData.json */; };
+		C39D7C0526B488E500499C15 /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C0426B488E500499C15 /* TestUser.swift */; };
+		C39D7C0726B48E6600499C15 /* SimpleModelData.json in Resources */ = {isa = PBXBuildFile; fileRef = C39D7C0626B48E6600499C15 /* SimpleModelData.json */; };
+		C39D7C0A26B5A22600499C15 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C0926B5A22600499C15 /* UIView+Extensions.swift */; };
+		C39D7C0D26B6E57C00499C15 /* ModalContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C0C26B6E57C00499C15 /* ModalContainerViewController.swift */; };
+		C39D7C1026B947D100499C15 /* BottomSheetAttachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C0F26B947D000499C15 /* BottomSheetAttachable.swift */; };
+		C39D7C1726B9556700499C15 /* InsetGroupedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C1626B9556700499C15 /* InsetGroupedCollectionView.swift */; };
+		C39D7C1B26B95A9400499C15 /* ModalContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C1A26B95A9400499C15 /* ModalContainerView.swift */; };
+		C39D7C1D26B9615100499C15 /* ModalContainerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C1C26B9615100499C15 /* ModalContainerViewDelegate.swift */; };
+		C39D7C1F26BAF8ED00499C15 /* BottomSheetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C1E26BAF8ED00499C15 /* BottomSheetDataSource.swift */; };
+		C39D7C3426BDC21500499C15 /* RacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C3326BDC21500499C15 /* RacesViewModel.swift */; };
+		C39D7C3726BDCE3400499C15 /* RacesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C3626BDCE3400499C15 /* RacesViewModelTests.swift */; };
+		C39D7C3B26BDD3D100499C15 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C3A26BDD3D100499C15 /* Race.swift */; };
+		C39D7C3E26BDD43600499C15 /* RacesData.json in Resources */ = {isa = PBXBuildFile; fileRef = C39D7C3D26BDD43600499C15 /* RacesData.json */; };
+		C39D7C4026BDD4E200499C15 /* RaceSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C3F26BDD4E200499C15 /* RaceSummary.swift */; };
+		C39D7C4226BDD4F500499C15 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C4126BDD4F500499C15 /* Ride.swift */; };
+		C39D7C4426BDD62500499C15 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C4326BDD62500499C15 /* Horse.swift */; };
+		C39D7C4626BDD79200499C15 /* SimpleModelsSnakeCaseData.json in Resources */ = {isa = PBXBuildFile; fileRef = C39D7C4526BDD79200499C15 /* SimpleModelsSnakeCaseData.json */; };
+		C39D7C4826BDD81E00499C15 /* TestMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C4726BDD81E00499C15 /* TestMovie.swift */; };
+		C39D7C4A26BE74A600499C15 /* FakeRacesData.json in Resources */ = {isa = PBXBuildFile; fileRef = C39D7C4926BE74A600499C15 /* FakeRacesData.json */; };
+		C39D7C4D26BE751900499C15 /* FakeDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C4C26BE751900499C15 /* FakeDataFetcher.swift */; };
+		C39D7C5026BE754F00499C15 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C4F26BE754F00499C15 /* DataFetcher.swift */; };
+		C39D7C5226BE875000499C15 /* BaseDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5126BE874F00499C15 /* BaseDataFetcher.swift */; };
+		C39D7C5526BE88A100499C15 /* RacesDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5426BE88A100499C15 /* RacesDataFetcher.swift */; };
+		C39D7C5726BE906B00499C15 /* InvalidDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5626BE906A00499C15 /* InvalidDataFetcher.swift */; };
+		C39D7C5A26BE918000499C15 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5926BE918000499C15 /* ViewState.swift */; };
+		C39D7C5C26BE997200499C15 /* DataFetcherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5B26BE997200499C15 /* DataFetcherError.swift */; };
+		C39D7C5E26BE9E1600499C15 /* EmptyDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5D26BE9E1600499C15 /* EmptyDataFetcher.swift */; };
+		C39D7C6026BE9E3D00499C15 /* EmptyData.json in Resources */ = {isa = PBXBuildFile; fileRef = C39D7C5F26BE9E3D00499C15 /* EmptyData.json */; };
+		C39D7C6526BFE2A700499C15 /* AppBootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C6426BFE2A700499C15 /* AppBootstrapper.swift */; };
+		C39D7C6A26BFE64300499C15 /* RacesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C6926BFE64300499C15 /* RacesViewControllerTests.swift */; };
+		C39D7C6F26BFF4F900499C15 /* StateChangeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C6E26BFF4F900499C15 /* StateChangeDelegate.swift */; };
+		C39D7C7226C01D6300499C15 /* InsetGroupedCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C7126C01D6200499C15 /* InsetGroupedCollectionViewTests.swift */; };
+		C39D7C7C26C027C800499C15 /* OverviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C7A26C027C800499C15 /* OverviewCollectionViewCell.swift */; };
+		C39D7C7D26C027C800499C15 /* OverviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39D7C7B26C027C800499C15 /* OverviewCollectionViewCell.xib */; };
+		C39D7C7F26C02C1500499C15 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C7E26C02C1500499C15 /* ReuseIdentifiable.swift */; };
+		C39D7C8126C0681600499C15 /* RaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C8026C0681400499C15 /* RaceDetailView.swift */; };
+		C39D7C8326C0739B00499C15 /* RaceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C8226C0739B00499C15 /* RaceDetailViewModel.swift */; };
+		C39D7C8526C07F8100499C15 /* RaceDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C8426C07F8100499C15 /* RaceDetailViewModelTests.swift */; };
+		C39D7C8726C082A000499C15 /* SortManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C8626C082A000499C15 /* SortManagerTests.swift */; };
+		C3BE76B626C1BDA5006C0860 /* MockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76B526C1BDA5006C0860 /* MockGenerator.swift */; };
+		C3BE76B826C289E8006C0860 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76B726C289E7006C0860 /* SegmentedControl.swift */; };
+		C3BE76BA26C2AB64006C0860 /* FormParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76B926C2AB64006C0860 /* FormParserTests.swift */; };
+		C3BE76BC26C2ABDA006C0860 /* FormParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76BB26C2ABD9006C0860 /* FormParser.swift */; };
+		C3BE76BE26C2AC83006C0860 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76BD26C2AC83006C0860 /* Form.swift */; };
+		C3BE76C226C2B762006C0860 /* FormScoreCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76C126C2B762006C0860 /* FormScoreCalculatorTests.swift */; };
+		C3BE76C426C2B7ED006C0860 /* FormScoreCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76C326C2B7ED006C0860 /* FormScoreCalculator.swift */; };
+		C3BE76CA26C2E3FD006C0860 /* FormSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76C926C2E3FD006C0860 /* FormSorter.swift */; };
+		C3BE76D226C30869006C0860 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BE76D126C30869006C0860 /* WidgetKit.framework */; };
+		C3BE76D426C30869006C0860 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BE76D326C30869006C0860 /* SwiftUI.framework */; };
+		C3BE76D726C30869006C0860 /* Horse_Racing_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76D626C30869006C0860 /* Horse_Racing_Widget.swift */; };
+		C3BE76DA26C3086D006C0860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BE76D926C3086D006C0860 /* Assets.xcassets */; };
+		C3BE76DC26C3086D006C0860 /* Horse_Racing_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76D826C30869006C0860 /* Horse_Racing_Widget.intentdefinition */; };
+		C3BE76DD26C3086E006C0860 /* Horse_Racing_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76D826C30869006C0860 /* Horse_Racing_Widget.intentdefinition */; };
+		C3BE76E026C3086E006C0860 /* Horse Racing WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C3BE76CF26C30868006C0860 /* Horse Racing WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C3BE76E526C30B52006C0860 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C3A26BDD3D100499C15 /* Race.swift */; };
+		C3BE76E626C30B6A006C0860 /* RaceSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C3F26BDD4E200499C15 /* RaceSummary.swift */; };
+		C3BE76E726C30B6A006C0860 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C4126BDD4F500499C15 /* Ride.swift */; };
+		C3BE76E826C30B6A006C0860 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C4326BDD62500499C15 /* Horse.swift */; };
+		C3BE76E926C30B6A006C0860 /* Odds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489F326C1A61A00AC14E8 /* Odds.swift */; };
+		C3BE76EA26C30B6A006C0860 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76BD26C2AC83006C0860 /* Form.swift */; };
+		C3BE76EB26C30B86006C0860 /* RacesDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5426BE88A100499C15 /* RacesDataFetcher.swift */; };
+		C3BE76EC26C30B86006C0860 /* BaseDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5126BE874F00499C15 /* BaseDataFetcher.swift */; };
+		C3BE76ED26C30B8F006C0860 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BEB26B46E3400499C15 /* FileReader.swift */; };
+		C3BE76EE26C30B8F006C0860 /* JsonFileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BFB26B47FDB00499C15 /* JsonFileDecoder.swift */; };
+		C3BE76EF26C30BA1006C0860 /* FileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BEF26B4720C00499C15 /* FileError.swift */; };
+		C3BE76F026C30BA1006C0860 /* JsonDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BFD26B4859000499C15 /* JsonDecodingError.swift */; };
+		C3BE76F126C30BA1006C0860 /* DataFetcherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5B26BE997200499C15 /* DataFetcherError.swift */; };
+		C3BE76F226C30BB2006C0860 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BF126B473ED00499C15 /* FileType.swift */; };
+		C3BE76F326C30BC7006C0860 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C4F26BE754F00499C15 /* DataFetcher.swift */; };
+		C3BE76F526C30C6B006C0860 /* RaceWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76F426C30C6B006C0860 /* RaceWidgetView.swift */; };
+		C3BE76F626C30C77006C0860 /* RaceWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76F426C30C6B006C0860 /* RaceWidgetView.swift */; };
+		C3BE76F726C30CDA006C0860 /* MockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76B526C1BDA5006C0860 /* MockGenerator.swift */; };
+		C3BE76F826C310C5006C0860 /* RacesData.json in Resources */ = {isa = PBXBuildFile; fileRef = C39D7C3D26BDD43600499C15 /* RacesData.json */; };
+		C3BE76FA26C3127A006C0860 /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76F926C3127A006C0860 /* TitleTextView.swift */; };
+		C3BE76FC26C312B2006C0860 /* SubTitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76FB26C312B2006C0860 /* SubTitleTextView.swift */; };
+		C3BE76FE26C312EC006C0860 /* BodyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76FD26C312EC006C0860 /* BodyTextView.swift */; };
+		C3BE770026C3134E006C0860 /* GroupedTitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76FF26C3134E006C0860 /* GroupedTitleTextView.swift */; };
+		C3BE770226C31525006C0860 /* TitlePillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE770126C31525006C0860 /* TitlePillButton.swift */; };
+		C3BE770626C31839006C0860 /* RaceSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE770526C31839006C0860 /* RaceSummaryView.swift */; };
+		C3BE770B26C318DD006C0860 /* RideListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE770A26C318DD006C0860 /* RideListItemView.swift */; };
+		C3BE770D26C3204F006C0860 /* DecimalPlacesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE770C26C3204F006C0860 /* DecimalPlacesServiceTests.swift */; };
+		C3BE770F26C320A1006C0860 /* DecimalPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE770E26C320A1006C0860 /* DecimalPlacesService.swift */; };
+		C3BE771026C32CF0006C0860 /* SubTitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76FB26C312B2006C0860 /* SubTitleTextView.swift */; };
+		C3BE771126C32CF0006C0860 /* TitlePillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE770126C31525006C0860 /* TitlePillButton.swift */; };
+		C3BE771226C32D5A006C0860 /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76F926C3127A006C0860 /* TitleTextView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C39D7BCC26B418FC00499C15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C39D7BAD26B418F800499C15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C39D7BB426B418F800499C15;
+			remoteInfo = "Horse Racing";
+		};
+		C3BE76DE26C3086E006C0860 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C39D7BAD26B418F800499C15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3BE76CE26C30868006C0860;
+			remoteInfo = "Horse Racing WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C3BE76E426C3086E006C0860 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C3BE76E026C3086E006C0860 /* Horse Racing WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C32489DD26C1161C00AC14E8 /* SortManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortManager.swift; sourceTree = "<group>"; };
+		C32489E026C1199C00AC14E8 /* ClothNumberSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothNumberSorter.swift; sourceTree = "<group>"; };
+		C32489E226C11EB700AC14E8 /* OddsSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsSorter.swift; sourceTree = "<group>"; };
+		C32489E426C11ECF00AC14E8 /* Sorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
+		C32489E826C1233B00AC14E8 /* OddsComparerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsComparerTests.swift; sourceTree = "<group>"; };
+		C32489EA26C141FB00AC14E8 /* OddsParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsParserTests.swift; sourceTree = "<group>"; };
+		C32489EC26C142A500AC14E8 /* OddsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsParser.swift; sourceTree = "<group>"; };
+		C32489EE26C14AB000AC14E8 /* OddsComparer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsComparer.swift; sourceTree = "<group>"; };
+		C32489F126C14B1A00AC14E8 /* OddsComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsComparison.swift; sourceTree = "<group>"; };
+		C32489F326C1A61A00AC14E8 /* Odds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Odds.swift; sourceTree = "<group>"; };
+		C32489F626C1B71E00AC14E8 /* OddsParserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsParserHelper.swift; sourceTree = "<group>"; };
+		C39D7BB526B418F800499C15 /* Horse Racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Horse Racing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39D7BB826B418F800499C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C39D7BBA26B418F800499C15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C39D7BBC26B418F800499C15 /* RacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesViewController.swift; sourceTree = "<group>"; };
+		C39D7BBF26B418F800499C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C39D7BC126B418FC00499C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C39D7BC426B418FC00499C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C39D7BC626B418FC00499C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39D7BCB26B418FC00499C15 /* Horse RacingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Horse RacingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39D7BCF26B418FC00499C15 /* Horse_RacingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse_RacingTests.swift; sourceTree = "<group>"; };
+		C39D7BD126B418FC00499C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39D7BEB26B46E3400499C15 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileReader.swift; path = ../../../../../Applications/FileReader.swift; sourceTree = "<group>"; };
+		C39D7BEF26B4720C00499C15 /* FileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileError.swift; sourceTree = "<group>"; };
+		C39D7BF126B473ED00499C15 /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
+		C39D7BF426B4747800499C15 /* FileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderTests.swift; sourceTree = "<group>"; };
+		C39D7BF626B47C9800499C15 /* JsonFileDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileDecoderTests.swift; sourceTree = "<group>"; };
+		C39D7BF926B47EF700499C15 /* SimpleDataStructureData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SimpleDataStructureData.json; sourceTree = "<group>"; };
+		C39D7BFB26B47FDB00499C15 /* JsonFileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileDecoder.swift; sourceTree = "<group>"; };
+		C39D7BFD26B4859000499C15 /* JsonDecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodingError.swift; sourceTree = "<group>"; };
+		C39D7C0126B4889F00499C15 /* SimpleModelsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SimpleModelsData.json; sourceTree = "<group>"; };
+		C39D7C0426B488E500499C15 /* TestUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
+		C39D7C0626B48E6600499C15 /* SimpleModelData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SimpleModelData.json; sourceTree = "<group>"; };
+		C39D7C0926B5A22600499C15 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C39D7C0C26B6E57C00499C15 /* ModalContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalContainerViewController.swift; sourceTree = "<group>"; };
+		C39D7C0F26B947D000499C15 /* BottomSheetAttachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetAttachable.swift; sourceTree = "<group>"; };
+		C39D7C1626B9556700499C15 /* InsetGroupedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedCollectionView.swift; sourceTree = "<group>"; };
+		C39D7C1A26B95A9400499C15 /* ModalContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalContainerView.swift; sourceTree = "<group>"; };
+		C39D7C1C26B9615100499C15 /* ModalContainerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalContainerViewDelegate.swift; sourceTree = "<group>"; };
+		C39D7C1E26BAF8ED00499C15 /* BottomSheetDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetDataSource.swift; sourceTree = "<group>"; };
+		C39D7C3326BDC21500499C15 /* RacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesViewModel.swift; sourceTree = "<group>"; };
+		C39D7C3626BDCE3400499C15 /* RacesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesViewModelTests.swift; sourceTree = "<group>"; };
+		C39D7C3A26BDD3D100499C15 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		C39D7C3D26BDD43600499C15 /* RacesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RacesData.json; sourceTree = "<group>"; };
+		C39D7C3F26BDD4E200499C15 /* RaceSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummary.swift; sourceTree = "<group>"; };
+		C39D7C4126BDD4F500499C15 /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		C39D7C4326BDD62500499C15 /* Horse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse.swift; sourceTree = "<group>"; };
+		C39D7C4526BDD79200499C15 /* SimpleModelsSnakeCaseData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SimpleModelsSnakeCaseData.json; sourceTree = "<group>"; };
+		C39D7C4726BDD81E00499C15 /* TestMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMovie.swift; sourceTree = "<group>"; };
+		C39D7C4926BE74A600499C15 /* FakeRacesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeRacesData.json; sourceTree = "<group>"; };
+		C39D7C4C26BE751900499C15 /* FakeDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataFetcher.swift; sourceTree = "<group>"; };
+		C39D7C4F26BE754F00499C15 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		C39D7C5126BE874F00499C15 /* BaseDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataFetcher.swift; sourceTree = "<group>"; };
+		C39D7C5426BE88A100499C15 /* RacesDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesDataFetcher.swift; sourceTree = "<group>"; };
+		C39D7C5626BE906A00499C15 /* InvalidDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidDataFetcher.swift; sourceTree = "<group>"; };
+		C39D7C5926BE918000499C15 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		C39D7C5B26BE997200499C15 /* DataFetcherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherError.swift; sourceTree = "<group>"; };
+		C39D7C5D26BE9E1600499C15 /* EmptyDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataFetcher.swift; sourceTree = "<group>"; };
+		C39D7C5F26BE9E3D00499C15 /* EmptyData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmptyData.json; sourceTree = "<group>"; };
+		C39D7C6426BFE2A700499C15 /* AppBootstrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrapper.swift; sourceTree = "<group>"; };
+		C39D7C6926BFE64300499C15 /* RacesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesViewControllerTests.swift; sourceTree = "<group>"; };
+		C39D7C6E26BFF4F900499C15 /* StateChangeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateChangeDelegate.swift; sourceTree = "<group>"; };
+		C39D7C7126C01D6200499C15 /* InsetGroupedCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedCollectionViewTests.swift; sourceTree = "<group>"; };
+		C39D7C7A26C027C800499C15 /* OverviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		C39D7C7B26C027C800499C15 /* OverviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionViewCell.xib; sourceTree = "<group>"; };
+		C39D7C7E26C02C1500499C15 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
+		C39D7C8026C0681400499C15 /* RaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailView.swift; sourceTree = "<group>"; };
+		C39D7C8226C0739B00499C15 /* RaceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailViewModel.swift; sourceTree = "<group>"; };
+		C39D7C8426C07F8100499C15 /* RaceDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailViewModelTests.swift; sourceTree = "<group>"; };
+		C39D7C8626C082A000499C15 /* SortManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortManagerTests.swift; sourceTree = "<group>"; };
+		C3BE76B526C1BDA5006C0860 /* MockGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGenerator.swift; sourceTree = "<group>"; };
+		C3BE76B726C289E7006C0860 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		C3BE76B926C2AB64006C0860 /* FormParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormParserTests.swift; sourceTree = "<group>"; };
+		C3BE76BB26C2ABD9006C0860 /* FormParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormParser.swift; sourceTree = "<group>"; };
+		C3BE76BD26C2AC83006C0860 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		C3BE76C126C2B762006C0860 /* FormScoreCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormScoreCalculatorTests.swift; sourceTree = "<group>"; };
+		C3BE76C326C2B7ED006C0860 /* FormScoreCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormScoreCalculator.swift; sourceTree = "<group>"; };
+		C3BE76C926C2E3FD006C0860 /* FormSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSorter.swift; sourceTree = "<group>"; };
+		C3BE76CF26C30868006C0860 /* Horse Racing WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Horse Racing WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BE76D126C30869006C0860 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C3BE76D326C30869006C0860 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C3BE76D626C30869006C0860 /* Horse_Racing_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse_Racing_Widget.swift; sourceTree = "<group>"; };
+		C3BE76D826C30869006C0860 /* Horse_Racing_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Horse_Racing_Widget.intentdefinition; sourceTree = "<group>"; };
+		C3BE76D926C3086D006C0860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3BE76DB26C3086D006C0860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3BE76F426C30C6B006C0860 /* RaceWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceWidgetView.swift; sourceTree = "<group>"; };
+		C3BE76F926C3127A006C0860 /* TitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
+		C3BE76FB26C312B2006C0860 /* SubTitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleTextView.swift; sourceTree = "<group>"; };
+		C3BE76FD26C312EC006C0860 /* BodyTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTextView.swift; sourceTree = "<group>"; };
+		C3BE76FF26C3134E006C0860 /* GroupedTitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedTitleTextView.swift; sourceTree = "<group>"; };
+		C3BE770126C31525006C0860 /* TitlePillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePillButton.swift; sourceTree = "<group>"; };
+		C3BE770526C31839006C0860 /* RaceSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummaryView.swift; sourceTree = "<group>"; };
+		C3BE770A26C318DD006C0860 /* RideListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListItemView.swift; sourceTree = "<group>"; };
+		C3BE770C26C3204F006C0860 /* DecimalPlacesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalPlacesServiceTests.swift; sourceTree = "<group>"; };
+		C3BE770E26C320A1006C0860 /* DecimalPlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalPlacesService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C39D7BB226B418F800499C15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C39D7BC826B418FC00499C15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BE76CC26C30868006C0860 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BE76D426C30869006C0860 /* SwiftUI.framework in Frameworks */,
+				C3BE76D226C30869006C0860 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C32489DF26C1198F00AC14E8 /* Sorters */ = {
+			isa = PBXGroup;
+			children = (
+				C32489E026C1199C00AC14E8 /* ClothNumberSorter.swift */,
+				C32489E226C11EB700AC14E8 /* OddsSorter.swift */,
+				C3BE76C926C2E3FD006C0860 /* FormSorter.swift */,
+			);
+			path = Sorters;
+			sourceTree = "<group>";
+		};
+		C32489F026C14B0800AC14E8 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				C32489F126C14B1A00AC14E8 /* OddsComparison.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		C32489F526C1B70C00AC14E8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C32489F626C1B71E00AC14E8 /* OddsParserHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C39D7BAC26B418F800499C15 = {
+			isa = PBXGroup;
+			children = (
+				C39D7BB726B418F800499C15 /* Horse Racing */,
+				C39D7BCE26B418FC00499C15 /* Horse RacingTests */,
+				C3BE76D526C30869006C0860 /* Horse Racing Widget */,
+				C3BE76D026C30869006C0860 /* Frameworks */,
+				C39D7BB626B418F800499C15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C39D7BB626B418F800499C15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7BB526B418F800499C15 /* Horse Racing.app */,
+				C39D7BCB26B418FC00499C15 /* Horse RacingTests.xctest */,
+				C3BE76CF26C30868006C0860 /* Horse Racing WidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C39D7BB726B418F800499C15 /* Horse Racing */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C3C26BDD42500499C15 /* Resources */,
+				C39D7C3126BDC1E100499C15 /* View Models */,
+				C39D7C1326B954C300499C15 /* Views */,
+				C39D7C0E26B940A200499C15 /* Protocols */,
+				C39D7C0B26B6E29700499C15 /* View Controllers */,
+				C39D7C0826B5A21700499C15 /* Extensions */,
+				C39D7BED26B471A300499C15 /* Models */,
+				C39D7BEA26B46E2000499C15 /* Utilities */,
+				C39D7BB826B418F800499C15 /* AppDelegate.swift */,
+				C39D7BBA26B418F800499C15 /* SceneDelegate.swift */,
+				C39D7BBE26B418F800499C15 /* Main.storyboard */,
+				C39D7BC126B418FC00499C15 /* Assets.xcassets */,
+				C39D7BC326B418FC00499C15 /* LaunchScreen.storyboard */,
+				C39D7BC626B418FC00499C15 /* Info.plist */,
+				C39D7C6426BFE2A700499C15 /* AppBootstrapper.swift */,
+			);
+			path = "Horse Racing";
+			sourceTree = "<group>";
+		};
+		C39D7BCE26B418FC00499C15 /* Horse RacingTests */ = {
+			isa = PBXGroup;
+			children = (
+				C32489F526C1B70C00AC14E8 /* Helpers */,
+				C39D7C7026C01D3900499C15 /* View Tests */,
+				C39D7C6826BFE62C00499C15 /* View Controller Tests */,
+				C39D7C4B26BE750B00499C15 /* Utilities */,
+				C39D7C3526BDCDD000499C15 /* View Model Tests */,
+				C39D7C0326B488D900499C15 /* Testing Models */,
+				C39D7BF826B47ECB00499C15 /* Data */,
+				C39D7BF326B4744D00499C15 /* Utility Tests */,
+				C39D7BCF26B418FC00499C15 /* Horse_RacingTests.swift */,
+				C39D7BD126B418FC00499C15 /* Info.plist */,
+			);
+			path = "Horse RacingTests";
+			sourceTree = "<group>";
+		};
+		C39D7BEA26B46E2000499C15 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C32489DF26C1198F00AC14E8 /* Sorters */,
+				C39D7C5326BE888C00499C15 /* Data Fetchers */,
+				C39D7BEB26B46E3400499C15 /* FileReader.swift */,
+				C39D7BFB26B47FDB00499C15 /* JsonFileDecoder.swift */,
+				C32489DD26C1161C00AC14E8 /* SortManager.swift */,
+				C32489EC26C142A500AC14E8 /* OddsParser.swift */,
+				C32489EE26C14AB000AC14E8 /* OddsComparer.swift */,
+				C3BE76BB26C2ABD9006C0860 /* FormParser.swift */,
+				C3BE76C326C2B7ED006C0860 /* FormScoreCalculator.swift */,
+				C3BE770E26C320A1006C0860 /* DecimalPlacesService.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C39D7BED26B471A300499C15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C32489F026C14B0800AC14E8 /* Enumerations */,
+				C39D7C5826BE916A00499C15 /* State */,
+				C39D7BEE26B471FB00499C15 /* Errors */,
+				C39D7BF126B473ED00499C15 /* FileType.swift */,
+				C39D7C3A26BDD3D100499C15 /* Race.swift */,
+				C39D7C3F26BDD4E200499C15 /* RaceSummary.swift */,
+				C39D7C4126BDD4F500499C15 /* Ride.swift */,
+				C39D7C4326BDD62500499C15 /* Horse.swift */,
+				C32489F326C1A61A00AC14E8 /* Odds.swift */,
+				C3BE76BD26C2AC83006C0860 /* Form.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C39D7BEE26B471FB00499C15 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7BEF26B4720C00499C15 /* FileError.swift */,
+				C39D7BFD26B4859000499C15 /* JsonDecodingError.swift */,
+				C39D7C5B26BE997200499C15 /* DataFetcherError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		C39D7BF326B4744D00499C15 /* Utility Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7BF426B4747800499C15 /* FileReaderTests.swift */,
+				C39D7BF626B47C9800499C15 /* JsonFileDecoderTests.swift */,
+				C39D7C8626C082A000499C15 /* SortManagerTests.swift */,
+				C32489E826C1233B00AC14E8 /* OddsComparerTests.swift */,
+				C32489EA26C141FB00AC14E8 /* OddsParserTests.swift */,
+				C3BE76B926C2AB64006C0860 /* FormParserTests.swift */,
+				C3BE76C126C2B762006C0860 /* FormScoreCalculatorTests.swift */,
+				C3BE770C26C3204F006C0860 /* DecimalPlacesServiceTests.swift */,
+			);
+			path = "Utility Tests";
+			sourceTree = "<group>";
+		};
+		C39D7BF826B47ECB00499C15 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7BF926B47EF700499C15 /* SimpleDataStructureData.json */,
+				C39D7C0126B4889F00499C15 /* SimpleModelsData.json */,
+				C39D7C0626B48E6600499C15 /* SimpleModelData.json */,
+				C39D7C4526BDD79200499C15 /* SimpleModelsSnakeCaseData.json */,
+				C39D7C4926BE74A600499C15 /* FakeRacesData.json */,
+				C39D7C5F26BE9E3D00499C15 /* EmptyData.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C39D7C0326B488D900499C15 /* Testing Models */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C0426B488E500499C15 /* TestUser.swift */,
+				C39D7C4726BDD81E00499C15 /* TestMovie.swift */,
+			);
+			path = "Testing Models";
+			sourceTree = "<group>";
+		};
+		C39D7C0826B5A21700499C15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C0926B5A22600499C15 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C39D7C0B26B6E29700499C15 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C1226B954A100499C15 /* Sections */,
+				C39D7C1126B9549A00499C15 /* Shared */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C39D7C0E26B940A200499C15 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C4E26BE754200499C15 /* Utilities */,
+				C39D7C2226BAF93400499C15 /* View Delegates */,
+				C39D7C2026BAF91600499C15 /* Bottom Sheet */,
+				C39D7C6E26BFF4F900499C15 /* StateChangeDelegate.swift */,
+				C39D7C7E26C02C1500499C15 /* ReuseIdentifiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C39D7C1126B9549A00499C15 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C0C26B6E57C00499C15 /* ModalContainerViewController.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C39D7C1226B954A100499C15 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7BBC26B418F800499C15 /* RacesViewController.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		C39D7C1326B954C300499C15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C7326C023E800499C15 /* Cells */,
+				C39D7C1526B954D200499C15 /* Shared */,
+				C39D7C1426B954C900499C15 /* Sections */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C39D7C1426B954C900499C15 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				C3BE770926C31857006C0860 /* Widget */,
+				C3BE770826C31847006C0860 /* Race Detail */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		C39D7C1526B954D200499C15 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C1626B9556700499C15 /* InsetGroupedCollectionView.swift */,
+				C39D7C1A26B95A9400499C15 /* ModalContainerView.swift */,
+				C3BE76B726C289E7006C0860 /* SegmentedControl.swift */,
+				C3BE76F926C3127A006C0860 /* TitleTextView.swift */,
+				C3BE76FB26C312B2006C0860 /* SubTitleTextView.swift */,
+				C3BE76FD26C312EC006C0860 /* BodyTextView.swift */,
+				C3BE76FF26C3134E006C0860 /* GroupedTitleTextView.swift */,
+				C3BE770126C31525006C0860 /* TitlePillButton.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C39D7C2026BAF91600499C15 /* Bottom Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C0F26B947D000499C15 /* BottomSheetAttachable.swift */,
+				C39D7C1E26BAF8ED00499C15 /* BottomSheetDataSource.swift */,
+			);
+			path = "Bottom Sheet";
+			sourceTree = "<group>";
+		};
+		C39D7C2226BAF93400499C15 /* View Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C1C26B9615100499C15 /* ModalContainerViewDelegate.swift */,
+			);
+			path = "View Delegates";
+			sourceTree = "<group>";
+		};
+		C39D7C3126BDC1E100499C15 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C3226BDC20600499C15 /* Sections */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		C39D7C3226BDC20600499C15 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C3326BDC21500499C15 /* RacesViewModel.swift */,
+				C39D7C8226C0739B00499C15 /* RaceDetailViewModel.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		C39D7C3526BDCDD000499C15 /* View Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C3626BDCE3400499C15 /* RacesViewModelTests.swift */,
+				C39D7C8426C07F8100499C15 /* RaceDetailViewModelTests.swift */,
+			);
+			path = "View Model Tests";
+			sourceTree = "<group>";
+		};
+		C39D7C3C26BDD42500499C15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3BE76B426C1BD88006C0860 /* Preview Mocks */,
+				C39D7C3D26BDD43600499C15 /* RacesData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C39D7C4B26BE750B00499C15 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C4C26BE751900499C15 /* FakeDataFetcher.swift */,
+				C39D7C5626BE906A00499C15 /* InvalidDataFetcher.swift */,
+				C39D7C5D26BE9E1600499C15 /* EmptyDataFetcher.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C39D7C4E26BE754200499C15 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C4F26BE754F00499C15 /* DataFetcher.swift */,
+				C32489E426C11ECF00AC14E8 /* Sorter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C39D7C5326BE888C00499C15 /* Data Fetchers */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C5126BE874F00499C15 /* BaseDataFetcher.swift */,
+				C39D7C5426BE88A100499C15 /* RacesDataFetcher.swift */,
+			);
+			path = "Data Fetchers";
+			sourceTree = "<group>";
+		};
+		C39D7C5826BE916A00499C15 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C5926BE918000499C15 /* ViewState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		C39D7C6826BFE62C00499C15 /* View Controller Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C6926BFE64300499C15 /* RacesViewControllerTests.swift */,
+			);
+			path = "View Controller Tests";
+			sourceTree = "<group>";
+		};
+		C39D7C7026C01D3900499C15 /* View Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C7126C01D6200499C15 /* InsetGroupedCollectionViewTests.swift */,
+			);
+			path = "View Tests";
+			sourceTree = "<group>";
+		};
+		C39D7C7326C023E800499C15 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C7926C027AF00499C15 /* Overview Collection View Cell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C39D7C7926C027AF00499C15 /* Overview Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C7A26C027C800499C15 /* OverviewCollectionViewCell.swift */,
+				C39D7C7B26C027C800499C15 /* OverviewCollectionViewCell.xib */,
+			);
+			path = "Overview Collection View Cell";
+			sourceTree = "<group>";
+		};
+		C3BE76B426C1BD88006C0860 /* Preview Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C3BE76B526C1BDA5006C0860 /* MockGenerator.swift */,
+			);
+			path = "Preview Mocks";
+			sourceTree = "<group>";
+		};
+		C3BE76D026C30869006C0860 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3BE76D126C30869006C0860 /* WidgetKit.framework */,
+				C3BE76D326C30869006C0860 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3BE76D526C30869006C0860 /* Horse Racing Widget */ = {
+			isa = PBXGroup;
+			children = (
+				C3BE76D626C30869006C0860 /* Horse_Racing_Widget.swift */,
+				C3BE76D826C30869006C0860 /* Horse_Racing_Widget.intentdefinition */,
+				C3BE76D926C3086D006C0860 /* Assets.xcassets */,
+				C3BE76DB26C3086D006C0860 /* Info.plist */,
+			);
+			path = "Horse Racing Widget";
+			sourceTree = "<group>";
+		};
+		C3BE770826C31847006C0860 /* Race Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C39D7C8026C0681400499C15 /* RaceDetailView.swift */,
+				C3BE770526C31839006C0860 /* RaceSummaryView.swift */,
+				C3BE770A26C318DD006C0860 /* RideListItemView.swift */,
+			);
+			path = "Race Detail";
+			sourceTree = "<group>";
+		};
+		C3BE770926C31857006C0860 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				C3BE76F426C30C6B006C0860 /* RaceWidgetView.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C39D7BB426B418F800499C15 /* Horse Racing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C39D7BDF26B418FC00499C15 /* Build configuration list for PBXNativeTarget "Horse Racing" */;
+			buildPhases = (
+				C39D7BB126B418F800499C15 /* Sources */,
+				C39D7BB226B418F800499C15 /* Frameworks */,
+				C39D7BB326B418F800499C15 /* Resources */,
+				C3BE76E426C3086E006C0860 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3BE76DF26C3086E006C0860 /* PBXTargetDependency */,
+			);
+			name = "Horse Racing";
+			productName = "Horse Racing";
+			productReference = C39D7BB526B418F800499C15 /* Horse Racing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C39D7BCA26B418FC00499C15 /* Horse RacingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C39D7BE226B418FC00499C15 /* Build configuration list for PBXNativeTarget "Horse RacingTests" */;
+			buildPhases = (
+				C39D7BC726B418FC00499C15 /* Sources */,
+				C39D7BC826B418FC00499C15 /* Frameworks */,
+				C39D7BC926B418FC00499C15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C39D7BCD26B418FC00499C15 /* PBXTargetDependency */,
+			);
+			name = "Horse RacingTests";
+			productName = "Horse RacingTests";
+			productReference = C39D7BCB26B418FC00499C15 /* Horse RacingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3BE76CE26C30868006C0860 /* Horse Racing WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3BE76E126C3086E006C0860 /* Build configuration list for PBXNativeTarget "Horse Racing WidgetExtension" */;
+			buildPhases = (
+				C3BE76CB26C30868006C0860 /* Sources */,
+				C3BE76CC26C30868006C0860 /* Frameworks */,
+				C3BE76CD26C30868006C0860 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Horse Racing WidgetExtension";
+			productName = "Horse Racing WidgetExtension";
+			productReference = C3BE76CF26C30868006C0860 /* Horse Racing WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C39D7BAD26B418F800499C15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C39D7BB426B418F800499C15 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					C39D7BCA26B418FC00499C15 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = C39D7BB426B418F800499C15;
+					};
+					C3BE76CE26C30868006C0860 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = C39D7BB026B418F800499C15 /* Build configuration list for PBXProject "Horse Racing" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C39D7BAC26B418F800499C15;
+			productRefGroup = C39D7BB626B418F800499C15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C39D7BB426B418F800499C15 /* Horse Racing */,
+				C39D7BCA26B418FC00499C15 /* Horse RacingTests */,
+				C3BE76CE26C30868006C0860 /* Horse Racing WidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C39D7BB326B418F800499C15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39D7BC526B418FC00499C15 /* LaunchScreen.storyboard in Resources */,
+				C39D7C7D26C027C800499C15 /* OverviewCollectionViewCell.xib in Resources */,
+				C39D7BC226B418FC00499C15 /* Assets.xcassets in Resources */,
+				C39D7C3E26BDD43600499C15 /* RacesData.json in Resources */,
+				C39D7BC026B418F800499C15 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C39D7BC926B418FC00499C15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39D7C4626BDD79200499C15 /* SimpleModelsSnakeCaseData.json in Resources */,
+				C39D7C6026BE9E3D00499C15 /* EmptyData.json in Resources */,
+				C39D7BFA26B47EF700499C15 /* SimpleDataStructureData.json in Resources */,
+				C39D7C4A26BE74A600499C15 /* FakeRacesData.json in Resources */,
+				C39D7C0726B48E6600499C15 /* SimpleModelData.json in Resources */,
+				C39D7C0226B4889F00499C15 /* SimpleModelsData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BE76CD26C30868006C0860 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BE76F826C310C5006C0860 /* RacesData.json in Resources */,
+				C3BE76DA26C3086D006C0860 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C39D7BB126B418F800499C15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39D7BBD26B418F800499C15 /* RacesViewController.swift in Sources */,
+				C39D7C5026BE754F00499C15 /* DataFetcher.swift in Sources */,
+				C3BE770626C31839006C0860 /* RaceSummaryView.swift in Sources */,
+				C32489E326C11EB700AC14E8 /* OddsSorter.swift in Sources */,
+				C3BE770F26C320A1006C0860 /* DecimalPlacesService.swift in Sources */,
+				C39D7C5A26BE918000499C15 /* ViewState.swift in Sources */,
+				C3BE76FC26C312B2006C0860 /* SubTitleTextView.swift in Sources */,
+				C39D7C4026BDD4E200499C15 /* RaceSummary.swift in Sources */,
+				C39D7C8126C0681600499C15 /* RaceDetailView.swift in Sources */,
+				C3BE76B626C1BDA5006C0860 /* MockGenerator.swift in Sources */,
+				C39D7BF226B473ED00499C15 /* FileType.swift in Sources */,
+				C3BE76FE26C312EC006C0860 /* BodyTextView.swift in Sources */,
+				C39D7C1D26B9615100499C15 /* ModalContainerViewDelegate.swift in Sources */,
+				C3BE770026C3134E006C0860 /* GroupedTitleTextView.swift in Sources */,
+				C39D7C5226BE875000499C15 /* BaseDataFetcher.swift in Sources */,
+				C39D7C1026B947D100499C15 /* BottomSheetAttachable.swift in Sources */,
+				C39D7C7C26C027C800499C15 /* OverviewCollectionViewCell.swift in Sources */,
+				C3BE76B826C289E8006C0860 /* SegmentedControl.swift in Sources */,
+				C39D7C3426BDC21500499C15 /* RacesViewModel.swift in Sources */,
+				C39D7C1B26B95A9400499C15 /* ModalContainerView.swift in Sources */,
+				C39D7C5526BE88A100499C15 /* RacesDataFetcher.swift in Sources */,
+				C32489F226C14B1A00AC14E8 /* OddsComparison.swift in Sources */,
+				C3BE770B26C318DD006C0860 /* RideListItemView.swift in Sources */,
+				C39D7C8326C0739B00499C15 /* RaceDetailViewModel.swift in Sources */,
+				C39D7C4226BDD4F500499C15 /* Ride.swift in Sources */,
+				C32489E526C11ECF00AC14E8 /* Sorter.swift in Sources */,
+				C3BE76BC26C2ABDA006C0860 /* FormParser.swift in Sources */,
+				C32489DE26C1161C00AC14E8 /* SortManager.swift in Sources */,
+				C39D7C6526BFE2A700499C15 /* AppBootstrapper.swift in Sources */,
+				C32489E126C1199C00AC14E8 /* ClothNumberSorter.swift in Sources */,
+				C39D7BB926B418F800499C15 /* AppDelegate.swift in Sources */,
+				C39D7C7F26C02C1500499C15 /* ReuseIdentifiable.swift in Sources */,
+				C32489ED26C142A500AC14E8 /* OddsParser.swift in Sources */,
+				C32489F426C1A61A00AC14E8 /* Odds.swift in Sources */,
+				C39D7C0A26B5A22600499C15 /* UIView+Extensions.swift in Sources */,
+				C39D7BFE26B4859000499C15 /* JsonDecodingError.swift in Sources */,
+				C3BE76DD26C3086E006C0860 /* Horse_Racing_Widget.intentdefinition in Sources */,
+				C3BE76C426C2B7ED006C0860 /* FormScoreCalculator.swift in Sources */,
+				C3BE76FA26C3127A006C0860 /* TitleTextView.swift in Sources */,
+				C39D7BFC26B47FDB00499C15 /* JsonFileDecoder.swift in Sources */,
+				C39D7C4426BDD62500499C15 /* Horse.swift in Sources */,
+				C3BE76F526C30C6B006C0860 /* RaceWidgetView.swift in Sources */,
+				C32489EF26C14AB000AC14E8 /* OddsComparer.swift in Sources */,
+				C39D7C6F26BFF4F900499C15 /* StateChangeDelegate.swift in Sources */,
+				C39D7C1726B9556700499C15 /* InsetGroupedCollectionView.swift in Sources */,
+				C3BE76CA26C2E3FD006C0860 /* FormSorter.swift in Sources */,
+				C39D7C0D26B6E57C00499C15 /* ModalContainerViewController.swift in Sources */,
+				C39D7BF026B4720C00499C15 /* FileError.swift in Sources */,
+				C39D7BEC26B46E3400499C15 /* FileReader.swift in Sources */,
+				C39D7BBB26B418F800499C15 /* SceneDelegate.swift in Sources */,
+				C39D7C3B26BDD3D100499C15 /* Race.swift in Sources */,
+				C3BE770226C31525006C0860 /* TitlePillButton.swift in Sources */,
+				C39D7C5C26BE997200499C15 /* DataFetcherError.swift in Sources */,
+				C3BE76BE26C2AC83006C0860 /* Form.swift in Sources */,
+				C39D7C1F26BAF8ED00499C15 /* BottomSheetDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C39D7BC726B418FC00499C15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BE76C226C2B762006C0860 /* FormScoreCalculatorTests.swift in Sources */,
+				C39D7BF726B47C9800499C15 /* JsonFileDecoderTests.swift in Sources */,
+				C39D7C5E26BE9E1600499C15 /* EmptyDataFetcher.swift in Sources */,
+				C39D7C8726C082A000499C15 /* SortManagerTests.swift in Sources */,
+				C39D7C8526C07F8100499C15 /* RaceDetailViewModelTests.swift in Sources */,
+				C39D7C4D26BE751900499C15 /* FakeDataFetcher.swift in Sources */,
+				C39D7C3726BDCE3400499C15 /* RacesViewModelTests.swift in Sources */,
+				C39D7C4826BDD81E00499C15 /* TestMovie.swift in Sources */,
+				C32489EB26C141FB00AC14E8 /* OddsParserTests.swift in Sources */,
+				C3BE76BA26C2AB64006C0860 /* FormParserTests.swift in Sources */,
+				C32489F726C1B71E00AC14E8 /* OddsParserHelper.swift in Sources */,
+				C39D7BF526B4747800499C15 /* FileReaderTests.swift in Sources */,
+				C39D7C5726BE906B00499C15 /* InvalidDataFetcher.swift in Sources */,
+				C39D7C0526B488E500499C15 /* TestUser.swift in Sources */,
+				C3BE770D26C3204F006C0860 /* DecimalPlacesServiceTests.swift in Sources */,
+				C39D7BD026B418FC00499C15 /* Horse_RacingTests.swift in Sources */,
+				C39D7C7226C01D6300499C15 /* InsetGroupedCollectionViewTests.swift in Sources */,
+				C32489E926C1233B00AC14E8 /* OddsComparerTests.swift in Sources */,
+				C39D7C6A26BFE64300499C15 /* RacesViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BE76CB26C30868006C0860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BE76EE26C30B8F006C0860 /* JsonFileDecoder.swift in Sources */,
+				C3BE76F326C30BC7006C0860 /* DataFetcher.swift in Sources */,
+				C3BE76EF26C30BA1006C0860 /* FileError.swift in Sources */,
+				C3BE76DC26C3086D006C0860 /* Horse_Racing_Widget.intentdefinition in Sources */,
+				C3BE76EA26C30B6A006C0860 /* Form.swift in Sources */,
+				C3BE76F726C30CDA006C0860 /* MockGenerator.swift in Sources */,
+				C3BE76EC26C30B86006C0860 /* BaseDataFetcher.swift in Sources */,
+				C3BE76E626C30B6A006C0860 /* RaceSummary.swift in Sources */,
+				C3BE76E526C30B52006C0860 /* Race.swift in Sources */,
+				C3BE76ED26C30B8F006C0860 /* FileReader.swift in Sources */,
+				C3BE771226C32D5A006C0860 /* TitleTextView.swift in Sources */,
+				C3BE76E826C30B6A006C0860 /* Horse.swift in Sources */,
+				C3BE76F026C30BA1006C0860 /* JsonDecodingError.swift in Sources */,
+				C3BE76E726C30B6A006C0860 /* Ride.swift in Sources */,
+				C3BE771026C32CF0006C0860 /* SubTitleTextView.swift in Sources */,
+				C3BE76F226C30BB2006C0860 /* FileType.swift in Sources */,
+				C3BE76F626C30C77006C0860 /* RaceWidgetView.swift in Sources */,
+				C3BE771126C32CF0006C0860 /* TitlePillButton.swift in Sources */,
+				C3BE76D726C30869006C0860 /* Horse_Racing_Widget.swift in Sources */,
+				C3BE76F126C30BA1006C0860 /* DataFetcherError.swift in Sources */,
+				C3BE76EB26C30B86006C0860 /* RacesDataFetcher.swift in Sources */,
+				C3BE76E926C30B6A006C0860 /* Odds.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C39D7BCD26B418FC00499C15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C39D7BB426B418F800499C15 /* Horse Racing */;
+			targetProxy = C39D7BCC26B418FC00499C15 /* PBXContainerItemProxy */;
+		};
+		C3BE76DF26C3086E006C0860 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3BE76CE26C30868006C0860 /* Horse Racing WidgetExtension */;
+			targetProxy = C3BE76DE26C3086E006C0860 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C39D7BBE26B418F800499C15 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C39D7BBF26B418F800499C15 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C39D7BC326B418FC00499C15 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C39D7BC426B418FC00499C15 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C39D7BDD26B418FC00499C15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C39D7BDE26B418FC00499C15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C39D7BE026B418FC00499C15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2262CQKPZT;
+				INFOPLIST_FILE = "Horse Racing/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sky-bet.Horse-Racing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKY_BET_URL = "https://m.skybet.com/horse-racing";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C39D7BE126B418FC00499C15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2262CQKPZT;
+				INFOPLIST_FILE = "Horse Racing/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sky-bet.Horse-Racing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKY_BET_URL = "https://m.skybet.com/horse-racing";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C39D7BE326B418FC00499C15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2262CQKPZT;
+				INFOPLIST_FILE = "Horse RacingTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sky-bet.Horse-RacingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Horse Racing.app/Horse Racing";
+			};
+			name = Debug;
+		};
+		C39D7BE426B418FC00499C15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2262CQKPZT;
+				INFOPLIST_FILE = "Horse RacingTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sky-bet.Horse-RacingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Horse Racing.app/Horse Racing";
+			};
+			name = Release;
+		};
+		C3BE76E226C3086E006C0860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2262CQKPZT;
+				INFOPLIST_FILE = "Horse Racing Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sky-bet.Horse-Racing.Horse-Racing-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3BE76E326C3086E006C0860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2262CQKPZT;
+				INFOPLIST_FILE = "Horse Racing Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sky-bet.Horse-Racing.Horse-Racing-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C39D7BB026B418F800499C15 /* Build configuration list for PBXProject "Horse Racing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39D7BDD26B418FC00499C15 /* Debug */,
+				C39D7BDE26B418FC00499C15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C39D7BDF26B418FC00499C15 /* Build configuration list for PBXNativeTarget "Horse Racing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39D7BE026B418FC00499C15 /* Debug */,
+				C39D7BE126B418FC00499C15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C39D7BE226B418FC00499C15 /* Build configuration list for PBXNativeTarget "Horse RacingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39D7BE326B418FC00499C15 /* Debug */,
+				C39D7BE426B418FC00499C15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3BE76E126C3086E006C0860 /* Build configuration list for PBXNativeTarget "Horse Racing WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3BE76E226C3086E006C0860 /* Debug */,
+				C3BE76E326C3086E006C0860 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C39D7BAD26B418F800499C15 /* Project object */;
+}
