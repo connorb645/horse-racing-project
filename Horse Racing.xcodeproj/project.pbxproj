@@ -18,6 +18,8 @@
 		C32489F226C14B1A00AC14E8 /* OddsComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489F126C14B1A00AC14E8 /* OddsComparison.swift */; };
 		C32489F426C1A61A00AC14E8 /* Odds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489F326C1A61A00AC14E8 /* Odds.swift */; };
 		C32489F726C1B71E00AC14E8 /* OddsParserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32489F626C1B71E00AC14E8 /* OddsParserHelper.swift */; };
+		C35AD1C126C3D67D0079EAD6 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35AD1C026C3D67D0079EAD6 /* FileReader.swift */; };
+		C35AD1C226C3D68D0079EAD6 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35AD1C026C3D67D0079EAD6 /* FileReader.swift */; };
 		C39D7BB926B418F800499C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BB826B418F800499C15 /* AppDelegate.swift */; };
 		C39D7BBB26B418F800499C15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BBA26B418F800499C15 /* SceneDelegate.swift */; };
 		C39D7BBD26B418F800499C15 /* RacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BBC26B418F800499C15 /* RacesViewController.swift */; };
@@ -25,7 +27,6 @@
 		C39D7BC226B418FC00499C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39D7BC126B418FC00499C15 /* Assets.xcassets */; };
 		C39D7BC526B418FC00499C15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39D7BC326B418FC00499C15 /* LaunchScreen.storyboard */; };
 		C39D7BD026B418FC00499C15 /* Horse_RacingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BCF26B418FC00499C15 /* Horse_RacingTests.swift */; };
-		C39D7BEC26B46E3400499C15 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BEB26B46E3400499C15 /* FileReader.swift */; };
 		C39D7BF026B4720C00499C15 /* FileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BEF26B4720C00499C15 /* FileError.swift */; };
 		C39D7BF226B473ED00499C15 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BF126B473ED00499C15 /* FileType.swift */; };
 		C39D7BF526B4747800499C15 /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BF426B4747800499C15 /* FileReaderTests.swift */; };
@@ -96,7 +97,6 @@
 		C3BE76EA26C30B6A006C0860 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE76BD26C2AC83006C0860 /* Form.swift */; };
 		C3BE76EB26C30B86006C0860 /* RacesDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5426BE88A100499C15 /* RacesDataFetcher.swift */; };
 		C3BE76EC26C30B86006C0860 /* BaseDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7C5126BE874F00499C15 /* BaseDataFetcher.swift */; };
-		C3BE76ED26C30B8F006C0860 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BEB26B46E3400499C15 /* FileReader.swift */; };
 		C3BE76EE26C30B8F006C0860 /* JsonFileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BFB26B47FDB00499C15 /* JsonFileDecoder.swift */; };
 		C3BE76EF26C30BA1006C0860 /* FileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BEF26B4720C00499C15 /* FileError.swift */; };
 		C3BE76F026C30BA1006C0860 /* JsonDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D7BFD26B4859000499C15 /* JsonDecodingError.swift */; };
@@ -164,6 +164,7 @@
 		C32489F126C14B1A00AC14E8 /* OddsComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsComparison.swift; sourceTree = "<group>"; };
 		C32489F326C1A61A00AC14E8 /* Odds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Odds.swift; sourceTree = "<group>"; };
 		C32489F626C1B71E00AC14E8 /* OddsParserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsParserHelper.swift; sourceTree = "<group>"; };
+		C35AD1C026C3D67D0079EAD6 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		C39D7BB526B418F800499C15 /* Horse Racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Horse Racing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39D7BB826B418F800499C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C39D7BBA26B418F800499C15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,7 +176,6 @@
 		C39D7BCB26B418FC00499C15 /* Horse RacingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Horse RacingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39D7BCF26B418FC00499C15 /* Horse_RacingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse_RacingTests.swift; sourceTree = "<group>"; };
 		C39D7BD126B418FC00499C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C39D7BEB26B46E3400499C15 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileReader.swift; path = ../../../../../Applications/FileReader.swift; sourceTree = "<group>"; };
 		C39D7BEF26B4720C00499C15 /* FileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileError.swift; sourceTree = "<group>"; };
 		C39D7BF126B473ED00499C15 /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
 		C39D7BF426B4747800499C15 /* FileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderTests.swift; sourceTree = "<group>"; };
@@ -368,8 +368,8 @@
 			children = (
 				C32489DF26C1198F00AC14E8 /* Sorters */,
 				C39D7C5326BE888C00499C15 /* Data Fetchers */,
-				C39D7BEB26B46E3400499C15 /* FileReader.swift */,
 				C39D7BFB26B47FDB00499C15 /* JsonFileDecoder.swift */,
+				C35AD1C026C3D67D0079EAD6 /* FileReader.swift */,
 				C32489DD26C1161C00AC14E8 /* SortManager.swift */,
 				C32489EC26C142A500AC14E8 /* OddsParser.swift */,
 				C32489EE26C14AB000AC14E8 /* OddsComparer.swift */,
@@ -846,6 +846,7 @@
 				C3BE770026C3134E006C0860 /* GroupedTitleTextView.swift in Sources */,
 				C39D7C5226BE875000499C15 /* BaseDataFetcher.swift in Sources */,
 				C39D7C1026B947D100499C15 /* BottomSheetAttachable.swift in Sources */,
+				C35AD1C126C3D67D0079EAD6 /* FileReader.swift in Sources */,
 				C39D7C7C26C027C800499C15 /* OverviewCollectionViewCell.swift in Sources */,
 				C3BE76B826C289E8006C0860 /* SegmentedControl.swift in Sources */,
 				C39D7C3426BDC21500499C15 /* RacesViewModel.swift in Sources */,
@@ -878,7 +879,6 @@
 				C3BE76CA26C2E3FD006C0860 /* FormSorter.swift in Sources */,
 				C39D7C0D26B6E57C00499C15 /* ModalContainerViewController.swift in Sources */,
 				C39D7BF026B4720C00499C15 /* FileError.swift in Sources */,
-				C39D7BEC26B46E3400499C15 /* FileReader.swift in Sources */,
 				C39D7BBB26B418F800499C15 /* SceneDelegate.swift in Sources */,
 				C39D7C3B26BDD3D100499C15 /* Race.swift in Sources */,
 				C3BE770226C31525006C0860 /* TitlePillButton.swift in Sources */,
@@ -927,7 +927,6 @@
 				C3BE76EC26C30B86006C0860 /* BaseDataFetcher.swift in Sources */,
 				C3BE76E626C30B6A006C0860 /* RaceSummary.swift in Sources */,
 				C3BE76E526C30B52006C0860 /* Race.swift in Sources */,
-				C3BE76ED26C30B8F006C0860 /* FileReader.swift in Sources */,
 				C3BE771226C32D5A006C0860 /* TitleTextView.swift in Sources */,
 				C3BE76E826C30B6A006C0860 /* Horse.swift in Sources */,
 				C3BE76F026C30BA1006C0860 /* JsonDecodingError.swift in Sources */,
@@ -935,6 +934,7 @@
 				C3BE771026C32CF0006C0860 /* SubTitleTextView.swift in Sources */,
 				C3BE76F226C30BB2006C0860 /* FileType.swift in Sources */,
 				C3BE76F626C30C77006C0860 /* RaceWidgetView.swift in Sources */,
+				C35AD1C226C3D68D0079EAD6 /* FileReader.swift in Sources */,
 				C3BE771126C32CF0006C0860 /* TitlePillButton.swift in Sources */,
 				C3BE76D726C30869006C0860 /* Horse_Racing_Widget.swift in Sources */,
 				C3BE76F126C30BA1006C0860 /* DataFetcherError.swift in Sources */,
